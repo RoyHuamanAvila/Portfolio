@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface WorkItemType {
     img: string;
     name: string;
@@ -13,4 +15,10 @@ export interface EducationItemType {
 export interface SkillType {
     name: string;
     progress: number;
+}
+
+export interface ContactInfoType {
+    name: string;
+    data: string;
+    children: ReactNode;
 }
