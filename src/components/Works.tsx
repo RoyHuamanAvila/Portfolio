@@ -4,7 +4,7 @@ import Tags from "./Tags"
 
 const Works = () => {
     return (
-        <div className="row py-5">
+        <div className="row py-5 my-5">
             <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>MY WORKS</p>
             <h2>Featured Portfolios</h2>
             <div className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
