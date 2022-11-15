@@ -7,7 +7,7 @@ const Experience = () => {
                 <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>CAREER PATH</p>
                 <h3>Work Experiences</h3>
                 <div className="pt-5">
-                    <p className="text-primary">Make It Real</p>
+                    <button className="text-primary border-0 bg-transparent">Make It Real</button>
                 </div>
             </div>
             <div className="col-12 col-lg-6">
