@@ -1,21 +1,22 @@
 import type { FC } from "react"
 import type { WorkItemType } from "../types"
+import Tags from "./Tags"
 
 const Works = () => {
     return (
-        <div className="row mb-4">
+        <div className="row py-5">
             <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>MY WORKS</p>
             <h2>Featured Portfolios</h2>
             <div className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
                 <WorkItem
                     img="/icon-no-image.svg"
                     name="Weather App"
-                    tags={['React', 'Sass', 'Typescript', 'OpenWeatherApi']}
+                    tags={['React', 'Sass', 'Typescript', 'OpenWeather']}
                 />
                 <WorkItem
                     img="/icon-no-image.svg"
                     name="Tu Video"
-                    tags={['React', 'Nodejs', 'Express', 'Sass', 'MongoDB']}
+                    tags={['React', 'Nodejs', 'Express', 'Sass', 'Mongo']}
                 />
                 <WorkItem
                     img="/icon-no-image.svg"
@@ -32,15 +33,11 @@ const WorkItem: FC<WorkItemType> = ({ img, name, tags }) => {
         <div className="col-12 col-lg-4">
             <div className="border rounded">
                 <img className="img-fluid" src={img} alt="work-image" />
-                <div className="py-2 px-2">
+                <div className="py-3 px-3">
                     <h4>{name}</h4>
-                    <div className="d-flex gap-2">
-                        {
-                            tags.map(tag =>
-                                <p className="border rounded px-1">{tag}</p>
-                            )
-                        }
-                    </div>
+                    {
+                        Tags(tags)
+                    }
                 </div>
             </div>
         </div>
