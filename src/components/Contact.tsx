@@ -15,7 +15,7 @@ const Contact = () => {
                         <label className="form-label">Message</label>
                         <textarea className="form-control" name="message" rows={5} />
                     </div>
-                    <button className="btn btn-primary col-12" type="submit">Send Message</button>
+                    <button className="btn btn-primary col-12 text-white" type="submit">Send Message</button>
                 </form>
             </div>
             <div className="col-12 col-lg-6 ps-5">
