@@ -8,6 +8,19 @@ textarea {
     resize: none !important;
 }
 
+.work-container-img {
+    height: 230px;
+    overflow: hidden;
+}
+
+.work-image {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+}
+
+
 .card-photo-bg {
     height: 400px;
     width: 336px;
