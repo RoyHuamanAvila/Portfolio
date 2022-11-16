@@ -13,7 +13,6 @@ textarea {
     width: 336px;
     border-radius: 16px;
     margin: auto;
-    transform: rotate(-9.55deg);
 }
 
 .card-photo {
@@ -21,7 +20,16 @@ textarea {
     height: 100%;
     background-color: whitesmoke;
     border-radius: 16px;
-    transform: rotate(9.55deg);
+}
+
+@media screen and (min-width: 992px) {
+    .card-photo-bg {
+        transform: rotate(-9.55deg);
+    }
+
+    .card-photo {
+        transform: rotate(9.55deg);
+    }
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

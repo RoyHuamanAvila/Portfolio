@@ -37,7 +37,7 @@ const SkillProgress: FC<SkillType> = ({ name, progress }) => {
         <div className="pe-5 py-2">
             <p>{name}</p>
             <div style={{ height: '10px' }} className="rounded bg-light w-100">
-                <div className="h-100 rounded bg-primary progress-fill"></div>
+                <div className="h-100 rounded bg-primary"></div>
             </div>
         </div>
     )
