@@ -36,8 +36,8 @@ const SkillProgress: FC<SkillType> = ({ name, progress }) => {
     return (
         <div className="pe-5 py-2">
             <p>{name}</p>
-            <div style={{ height: '10px' }} className="rounded bg-light w-100">
-                <div className="h-100 rounded bg-primary"></div>
+            <div className="progress">
+                <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: `${progress}%` }} aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}></div>
             </div>
         </div>
     )
