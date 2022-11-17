@@ -1,7 +1,9 @@
 $primary: #74f180;
+$secondary: #6c757d;
 
 $theme-colors: (
-    "primary": $primary
+    "primary": $primary,
+    "secondary": $secondary
 );
 
 textarea {
@@ -11,6 +13,7 @@ textarea {
 .work-container-img {
     height: 230px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .work-image {
@@ -20,6 +23,9 @@ textarea {
     opacity: 1;
 }
 
+.blockquote-footer {
+    letter-spacing: 5px;
+}
 
 .card-photo-bg {
     height: 400px;
