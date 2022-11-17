@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material';
 const About = () => {
     return (
         <div id="about" className="row py-4">
-            <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>MY NAME IS</p>
+            <p className="blockquote-footer">MY NAME IS</p>
             <div className="col-12 col-lg-6">
                 <h1>Roy <span className='text-primary'>Huaman</span></h1>
                 <p>

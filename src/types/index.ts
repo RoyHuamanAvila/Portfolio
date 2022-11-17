@@ -3,7 +3,10 @@ import { ReactNode } from "react";
 export interface WorkItemType {
     img: string;
     name: string;
+    description?: string;
     tags: string[];
+    linkCode: string;
+    linkDemo: string;
 }
 
 export interface EducationItemType {
