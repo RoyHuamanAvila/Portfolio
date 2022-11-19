@@ -1,9 +1,18 @@
-import { DarkModeOutlined } from "@mui/icons-material";
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../app/store";
+import { darkMode, lightMode } from "../features/pageParams/pageParamsSlice";
 
 const Navbar = () => {
+    const dispatch = useDispatch();
+    const theme = useSelector((state: RootState) => state.pageParams.theme);
+    const toggleTheme = () => {
+        theme === 'light' ? dispatch(darkMode()) : dispatch(lightMode());
+    }
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">RoyAndDev</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +45,7 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li className="nav-item d-lg-none">
-                            <DarkModeOutlined fontSize="large" className="nav-link" />
+                            <DarkModeOutlined fontSize="large" className="nav-link" color="inherit" />
                         </li>
                         {/* <li className="nav-item">
                             <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
@@ -44,8 +53,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="d-none d-lg-block">
-                    <IconButton aria-label="Dark-Mode">
-                        <DarkModeOutlined />
+                    <IconButton aria-label="Dark-Mode" color="inherit" onClick={toggleTheme}>
+                        {
+                            theme === 'light' ? <DarkModeOutlined /> : <LightModeOutlined />
+                        }
                     </IconButton>
                 </div>
             </div>

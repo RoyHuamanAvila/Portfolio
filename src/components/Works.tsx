@@ -50,7 +50,7 @@ const WorkItem: FC<WorkItemType> = (work) => {
     return (
         <div className="col-12 col-lg-4">
             <div className="border rounded">
-                <div className="work-container-img rounded-top" data-bs-toggle="modal" data-bs-target={`#${name.split(' ').join('')}modal`}>
+                <div className="work-container-img rounded-top bg-white" data-bs-toggle="modal" data-bs-target={`#${name.split(' ').join('')}modal`}>
                     <img className="work-image" src={img} alt="work-image" />
                 </div>
                 <div className="py-3 px-3">

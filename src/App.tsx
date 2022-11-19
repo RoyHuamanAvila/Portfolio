@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+import { RootState } from "./app/store";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
@@ -7,15 +9,19 @@ import Navbar from "./components/Navbar";
 import Works from "./components/Works";
 
 const App = () => {
+  const theme = useSelector((state: RootState) => state.pageParams.theme);
+
   return (
-    <div className="container">
-      <Navbar />
-      <About />
-      <Works />
-      <Experience />
-      <Education />
-      <Contact />
-      <Footer />
+    <div className={`page-container ${theme}`}>
+      <div className="container">
+        <Navbar />
+        <About />
+        <Works />
+        <Experience />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   )
 }
