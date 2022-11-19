@@ -6,6 +6,56 @@ $theme-colors: (
     "secondary": $secondary
 );
 
+
+.neon {
+    color: $primary;
+}
+
+.page-container {
+    background-color: #fff;
+    transition: background-color 0.5s;
+}
+
+.dark {
+    background-color: #1E1E1E;
+    color: #fff;
+    transition: background-color 0.5s;
+
+    h1 {
+        color: #fff;
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 1px $primary,
+            0 0 5px $primary,
+            0 0 10px $primary,
+            0 0 20px $primary;
+        transition: 0.5s;
+    }
+
+    .modal-content {
+        background-color: #1E1E1E;
+    }
+
+    .nav-link {
+        color: #fff !important;
+    }
+
+    .nav-link:hover {
+        color: $primary !important;
+    }
+
+    .navbar-brand {
+        color: #fff;
+    }
+
+    .list-group-item {
+        background-color: transparent;
+        color: #fff;
+    }
+}
+
 textarea {
     resize: none !important;
 }
