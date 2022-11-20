@@ -24,7 +24,7 @@ const About = () => {
                 {/*                 <div className="card-photo-bg bg-primary">
                     <img src="/icon-no-image.svg" className='card-photo' alt='card-photo' />
                 </div> */}
-                <img className='d-block m-auto' src="/person-programming.svg" alt="" />
+                <img className='d-block m-auto img-fluid' src="/person-programming.svg" alt="" />
             </div>
         </div>
     )
