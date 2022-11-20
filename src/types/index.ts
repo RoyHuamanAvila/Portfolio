@@ -23,6 +23,7 @@ export interface SkillType {
 export interface ContactInfoType {
     name: string;
     data: string;
+    link?: string;
     children: ReactNode;
 }
 
