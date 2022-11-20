@@ -54,6 +54,11 @@ $theme-colors: (
         background-color: transparent;
         color: #fff;
     }
+
+    .navbar-toggler {
+        color: #fff;
+        border-color: $secondary;
+    }
 }
 
 textarea {

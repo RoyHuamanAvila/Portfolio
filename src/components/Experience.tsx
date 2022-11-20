@@ -6,8 +6,8 @@ const Experience = () => {
             <div className="col-12 col-lg-6">
                 <p className="blockquote-footer">CAREER PATH</p>
                 <h3>Work Experiences</h3>
-                <div className="pt-5">
-                    <button className="text-primary border-0 bg-transparent">Make It Real</button>
+                <div className="pt-5 pb-2">
+                    <button className="text-primary border-0 bg-transparent ps-0">Make It Real</button>
                 </div>
             </div>
             <div className="col-12 col-lg-6">

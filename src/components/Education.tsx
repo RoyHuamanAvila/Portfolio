@@ -3,7 +3,7 @@ import { EducationItemType, SkillType } from "../types";
 
 const Education = () => {
     return (
-        <div className="py-5 my-5">
+        <div className="py-5 my-5 " id="Skills">
             <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>LEARNING PATH</p>
             <h3>Education & Skills</h3>
             <div className="row">

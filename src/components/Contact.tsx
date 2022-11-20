@@ -4,7 +4,7 @@ import { ContactInfoType } from "../types";
 
 const Contact = () => {
     return (
-        <div className="row py-5 my-5 gx-5">
+        <div className="row py-5 my-5 gx-5" id="Contact">
             <div className="col-12 col-lg-6">
                 <form>
                     <div className="mb-3">
@@ -18,7 +18,7 @@ const Contact = () => {
                     <button className="btn btn-primary col-12 text-white" type="submit">Send Message</button>
                 </form>
             </div>
-            <div className="col-12 col-lg-6 ps-5">
+            <div className="col-12 col-lg-6 ps-5 pt-5 pt-lg-0">
                 <ContactInfoItem name="Address" data="Lurin, Lima, Perú">
                     <LocationOn className="m-auto" />
                 </ContactInfoItem>
