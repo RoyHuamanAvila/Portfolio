@@ -19,13 +19,25 @@ const Contact = () => {
                 </form>
             </div>
             <div className="col-12 col-lg-6 ps-5 pt-5 pt-lg-0">
-                <ContactInfoItem name="Address" data="Lurin, Lima, Perú">
+                <ContactInfoItem
+                    name="Address"
+                    data="Lurin, Lima, Perú"
+                    link="https://goo.gl/maps/RZLXPVT4zsnfV82t6"
+                >
                     <LocationOn className="m-auto" />
                 </ContactInfoItem>
-                <ContactInfoItem name="Phone" data="+51 981 830 913">
+                <ContactInfoItem
+                    name="Phone"
+                    data="+51 981 830 913"
+                    link="https://wa.me/51981830913?text=Hola quisiera contactar contigo"
+                >
                     <Call className="m-auto" />
                 </ContactInfoItem>
-                <ContactInfoItem name="E-Mail" data="royhuamanavila@gmail.com">
+                <ContactInfoItem
+                    name="E-Mail"
+                    data="royhuamanavila@gmail.com"
+                    link="mailto: royhuamanavila@gmail.com"
+                >
                     <Email className="m-auto" />
                 </ContactInfoItem>
             </div>
@@ -33,7 +45,7 @@ const Contact = () => {
     )
 }
 
-const ContactInfoItem: FC<ContactInfoType> = ({ name, data, children }) => {
+const ContactInfoItem: FC<ContactInfoType> = ({ name, data, children, link }) => {
     return (
         <div className="d-flex gap-3 mb-3">
             <div style={{ width: '56px', height: '56px' }} className="bg-light p-2 rounded-2 d-flex text-primary">
@@ -41,7 +53,7 @@ const ContactInfoItem: FC<ContactInfoType> = ({ name, data, children }) => {
             </div>
             <div>
                 <p className="fw-semibold m-0">{name}</p>
-                <p className="text-muted">{data}</p>
+                <a href={link} target={"_blank"} className="text-decoration-none text-muted">{data}</a>
             </div>
         </div>
     )
