@@ -10,6 +10,7 @@
       {
         "aria-valid-attr-value": "off"
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
