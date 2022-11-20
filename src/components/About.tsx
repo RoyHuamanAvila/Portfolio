@@ -21,9 +21,10 @@ const About = () => {
                 </div>
             </div>
             <div className="col-12 col-lg-6 pt-5 pt-lg-0">
-                <div className="card-photo-bg bg-primary">
+                {/*                 <div className="card-photo-bg bg-primary">
                     <img src="/icon-no-image.svg" className='card-photo' alt='card-photo' />
-                </div>
+                </div> */}
+                <img className='d-block m-auto' src="/person-programming.svg" alt="" />
             </div>
         </div>
     )

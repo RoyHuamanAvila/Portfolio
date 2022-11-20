@@ -25,3 +25,9 @@ export interface ContactInfoType {
     data: string;
     children: ReactNode;
 }
+
+export interface ServiceItemType {
+    name: string;
+    description: string;
+    children: ReactNode;
+}
