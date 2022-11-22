@@ -35,8 +35,8 @@ const Contact = () => {
                 </ContactInfoItem>
                 <ContactInfoItem
                     name="E-Mail"
-                    data="royhuamanavila@gmail.com"
-                    link="mailto: royhuamanavila@gmail.com"
+                    data="info@royandresdev.com"
+                    link="mailto: info@royandresdev.com"
                 >
                     <Email className="m-auto" />
                 </ContactInfoItem>
