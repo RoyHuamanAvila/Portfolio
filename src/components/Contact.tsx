@@ -1,19 +1,46 @@
 import { LocationOn, Call, Email } from "@mui/icons-material";
-import { FC } from "react";
-import { ContactInfoType } from "../types";
+import { FC, SyntheticEvent } from "react";
+import { ContactFormType, ContactInfoType } from "../types";
 
 const Contact = () => {
+
+    const handleSubmit = async (e: SyntheticEvent) => {
+        e.preventDefault();
+
+        const target = e.target as typeof e.target & ContactFormType;
+
+        const data = {
+            name: target.name.value,
+            email: target.email.value,
+            message: target.message.value
+        }
+
+        const dataJson = JSON.stringify(data);
+
+        const fetchEmail = await fetch(`https://us-central1-portfolio-ff801.cloudfunctions.net/api/send-email`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: dataJson,
+        })
+
+        const content = await fetchEmail.json();
+        console.log(content);
+    }
+
     return (
         <div className="row py-5 my-5 gx-5" id="Contact">
             <div className="col-12 col-lg-6">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label">Name</label>
-                        <input className="form-control mb-2" type="text" name="name" />
+                        <input className="form-control mb-2" type="text" name="name" required />
                         <label className="form-label">Email</label>
-                        <input className="form-control mb-2" type="email" name="email" />
+                        <input className="form-control mb-2" type="email" name="email" required />
                         <label className="form-label">Message</label>
-                        <textarea className="form-control" name="message" rows={5} />
+                        <textarea className="form-control" name="message" rows={5} required />
                     </div>
                     <button className="btn btn-primary col-12 text-white" type="submit">Send Message</button>
                 </form>

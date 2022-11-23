@@ -27,6 +27,18 @@ export interface ContactInfoType {
     children: ReactNode;
 }
 
+export interface ContactFormType {
+    name: {
+        value: string;
+    };
+    email: {
+        value: string;
+    };
+    message: {
+        value: string;
+    };
+}
+
 export interface ServiceItemType {
     name: string;
     description: string;
