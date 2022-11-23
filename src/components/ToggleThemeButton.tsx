@@ -9,13 +9,13 @@ const ToggleThemeButton = () => {
     const theme = useSelector((state: RootState) => state.pageParams.theme);
 
     const toggleTheme = () => {
-        theme === 'light' ? dispatch(darkMode()) : dispatch(lightMode());
+        theme === 'dark' ? dispatch(lightMode()) : dispatch(darkMode());
     }
 
     return (
         <IconButton aria-label="Dark-Mode" color="inherit" onClick={toggleTheme}>
             {
-                theme === 'light' ? <DarkModeOutlined /> : <LightModeOutlined />
+                theme === 'light' ? <LightModeOutlined /> : <DarkModeOutlined />
             }
         </IconButton>
     )
