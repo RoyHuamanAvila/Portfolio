@@ -29,7 +29,7 @@ const Contact = () => {
             body: dataJson,
         }).then((response => {
             setDisabledForm(false)
-            swal("Good job!", "You clicked the button!", "success");
+            swal("Message sent!", "You clicked the button!", "success");
             target.name.value = '';
             target.email.value = '';
             target.message.value = '';
