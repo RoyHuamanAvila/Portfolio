@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 export interface WorkItemType {
+    id: string;
     img: string;
     name: string;
     description?: string;
