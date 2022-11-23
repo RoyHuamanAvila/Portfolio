@@ -7,6 +7,7 @@ import Tags from "./Tags"
 const Works = () => {
     const initialWorks: WorkItemType[] = [
         {
+            id: "1",
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668635675/WorksPortfolio/WeatherApp/WeatherAppMain.jpg",
             name: "Weather App",
             tags: ['React', 'Sass', 'Typescript', 'OpenWeather'],
@@ -15,6 +16,7 @@ const Works = () => {
             linkDemo: ''
         },
         {
+            id: "2",
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668635949/WorksPortfolio/TuVideo/TuVideoMain.jpg",
             name: "Tu Video",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quo deleniti, earum ullam eius nostrum tenetur veritatis, nihil reprehenderit, esse repellendus? Dolorum architecto laboriosam asperiores sunt eum magni modi natus.",
@@ -23,6 +25,7 @@ const Works = () => {
             linkDemo: 'https://tuvideo.vercel.app'
         },
         {
+            id: "3",
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668636039/WorksPortfolio/TemplatePage/TemplatePageMain.jpg",
             name: "Template Page",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio assumenda consectetur consequuntur commodi atque non quas id minus, repellat incidunt voluptatum nulla facilis minima delectus reiciendis maxime illo. Provident.",
@@ -37,9 +40,9 @@ const Works = () => {
             <p className="blockquote-footer">MY WORKS</p>
             <h2>Featured Portfolios</h2>
             <div className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
-                <WorkItem {...initialWorks[0]} />
-                <WorkItem {...initialWorks[1]} />
-                <WorkItem {...initialWorks[2]} />
+                {
+                    initialWorks.map(work => <WorkItem key={work.id} {...work} />)
+                }
             </div>
         </div>
     )

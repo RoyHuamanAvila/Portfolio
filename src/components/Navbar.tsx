@@ -1,16 +1,8 @@
-import { DarkModeOutlined, LightModeOutlined, Menu } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../app/store";
-import { darkMode, lightMode } from "../features/pageParams/pageParamsSlice";
+import { Menu } from "@mui/icons-material";
+import ToggleThemeButton from "./ToggleThemeButton";
+
 
 const Navbar = () => {
-    const dispatch = useDispatch();
-    const theme = useSelector((state: RootState) => state.pageParams.theme);
-    const toggleTheme = () => {
-        theme === 'light' ? dispatch(darkMode()) : dispatch(lightMode());
-    }
-
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
@@ -45,9 +37,7 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li className="nav-item d-lg-none">
-                            <IconButton color="inherit" onClick={toggleTheme}>
-                                <DarkModeOutlined fontSize="large" />
-                            </IconButton>
+                            <ToggleThemeButton />
                         </li>
                         {/* <li className="nav-item">
                             <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
@@ -55,11 +45,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="d-none d-lg-block">
-                    <IconButton aria-label="Dark-Mode" color="inherit" onClick={toggleTheme}>
-                        {
-                            theme === 'light' ? <DarkModeOutlined /> : <LightModeOutlined />
-                        }
-                    </IconButton>
+                    <ToggleThemeButton />
                 </div>
             </div>
         </nav>
