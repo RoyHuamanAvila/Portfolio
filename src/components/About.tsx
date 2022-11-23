@@ -19,6 +19,7 @@ const About = () => {
                         <LinkedIn />
                     </IconButton>
                 </div>
+                <button className='mt-2 btn btn-primary text-white'>Download CV</button>
             </div>
             <div className="col-12 col-lg-6 pt-5 pt-lg-0">
                 {/*                 <div className="card-photo-bg bg-primary">
