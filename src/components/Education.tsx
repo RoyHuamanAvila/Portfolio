@@ -38,7 +38,7 @@ const Education = () => {
 
 const SkillProgress: FC<SkillType> = ({ name, progress, progressInView }) => {
     return (
-        <div className="pe-5 py-2">
+        <div className="pe-lg-5 py-2">
             <p>{name}</p>
             <div className="progress">
                 <div className="progress-container" style={{ width: `${progress}%` }}>
