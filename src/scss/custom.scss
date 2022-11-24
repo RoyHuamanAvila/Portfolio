@@ -96,6 +96,22 @@ textarea {
     border-radius: 16px;
 }
 
+.progress-container {
+    height: 100%;
+}
+
+.progress-none {
+    width: 0;
+    height: 100%;
+}
+
+.progress-transition {
+    width: 100%;
+    background-color: $primary;
+    transition: width 1s linear;
+}
+
+
 @media screen and (min-width: 992px) {
     .card-photo-bg {
         transform: rotate(-9.55deg);
