@@ -3,9 +3,7 @@ import { EducationItemType, SkillType } from "../types";
 import { useInView } from 'react-intersection-observer'
 
 const Education = () => {
-    const { ref: ProgressContainer, inView: progressInView } = useInView({
-        threshold: 0.2,
-    });
+    const { ref: ProgressContainer, inView: progressInView } = useInView();
     return (
         <div className="py-5 my-5 " id="Skills">
             <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>LEARNING PATH</p>
@@ -19,16 +17,18 @@ const Education = () => {
                     </div>
                 </div>
                 <div className="col-6">
-                    <div className="py-4" ref={ProgressContainer}>
+                    <div className="py-4">
                         <p>
                             For 5+ years, I have been continuously learning in the field of front-end and experimenting with
                             new technologies and frameworks, and here you can see a summary of my skills.
                         </p>
-                        <SkillProgress name="React" progress={80} progressInView={progressInView} />
-                        <SkillProgress name="Nodejs" progress={65} progressInView={progressInView} />
-                        <SkillProgress name="Javascript" progress={90} progressInView={progressInView} />
-                        <SkillProgress name="Typescript" progress={75} progressInView={progressInView} />
-                        <SkillProgress name="Bootstrap 5" progress={70} progressInView={progressInView} />
+                        <div ref={ProgressContainer}>
+                            <SkillProgress name="React" progress={80} progressInView={progressInView} />
+                            <SkillProgress name="Nodejs" progress={65} progressInView={progressInView} />
+                            <SkillProgress name="Javascript" progress={90} progressInView={progressInView} />
+                            <SkillProgress name="Typescript" progress={75} progressInView={progressInView} />
+                            <SkillProgress name="Bootstrap 5" progress={70} progressInView={progressInView} />
+                        </div>
                     </div>
                 </div>
             </div>
