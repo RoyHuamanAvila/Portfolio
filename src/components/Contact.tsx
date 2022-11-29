@@ -37,7 +37,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="row py-5 my-5 gx-5" id="Contact">
+        <div className="row py-5 my-5 gx-lg-5" id="Contact">
             <div className="col-12 col-lg-6">
                 <form onSubmit={handleSubmit}>
                     <fieldset disabled={disabledForm}>

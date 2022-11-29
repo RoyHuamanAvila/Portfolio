@@ -1,7 +1,9 @@
 import { FC } from "react";
 import { EducationItemType, SkillType } from "../types";
+import { useInView } from 'react-intersection-observer'
 
 const Education = () => {
+    const { ref: ProgressContainer, inView: progressInView } = useInView();
     return (
         <div className="py-5 my-5 " id="Skills">
             <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>LEARNING PATH</p>
@@ -20,11 +22,13 @@ const Education = () => {
                             For 5+ years, I have been continuously learning in the field of front-end and experimenting with
                             new technologies and frameworks, and here you can see a summary of my skills.
                         </p>
-                        <SkillProgress name="React" progress={80} />
-                        <SkillProgress name="Nodejs" progress={65} />
-                        <SkillProgress name="Javascript" progress={90} />
-                        <SkillProgress name="Typescript" progress={75} />
-                        <SkillProgress name="Bootstrap 5" progress={70} />
+                        <div ref={ProgressContainer}>
+                            <SkillProgress name="React" progress={80} progressInView={progressInView} />
+                            <SkillProgress name="Nodejs" progress={65} progressInView={progressInView} />
+                            <SkillProgress name="Javascript" progress={90} progressInView={progressInView} />
+                            <SkillProgress name="Typescript" progress={75} progressInView={progressInView} />
+                            <SkillProgress name="Bootstrap 5" progress={70} progressInView={progressInView} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,12 +36,14 @@ const Education = () => {
     )
 }
 
-const SkillProgress: FC<SkillType> = ({ name, progress }) => {
+const SkillProgress: FC<SkillType> = ({ name, progress, progressInView }) => {
     return (
-        <div className="pe-5 py-2">
+        <div className="pe-lg-5 py-2">
             <p>{name}</p>
             <div className="progress">
-                <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: `${progress}%` }} aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}></div>
+                <div className="progress-container" style={{ width: `${progress}%` }}>
+                    <div className={`progress-none ${progressInView && 'progress-transition'}`}></div>
+                </div>
             </div>
         </div>
     )

@@ -19,6 +19,7 @@ export interface EducationItemType {
 export interface SkillType {
     name: string;
     progress: number;
+    progressInView?: boolean;
 }
 
 export interface ContactInfoType {
