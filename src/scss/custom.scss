@@ -42,6 +42,10 @@ $theme-colors: (
         color: #fff !important;
     }
 
+    .nav-link.active {
+        background-color: transparent !important;
+    }
+
     .nav-link:hover {
         color: $primary !important;
     }
@@ -58,6 +62,39 @@ $theme-colors: (
     .navbar-toggler {
         color: #fff;
         border-color: $secondary;
+    }
+}
+
+.point {
+    background-color: #f1f1f1;
+    width: 16px;
+    height: 16px;
+}
+
+.temp-line {
+    position: relative;
+}
+
+.temp-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #f1f1f1;
+    width: 2px;
+    left: 8px;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+
+.skillItem {
+    width: 70px;
+
+    .skillItem-image {
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
     }
 }
 
