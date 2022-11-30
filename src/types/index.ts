@@ -22,6 +22,11 @@ export interface SkillType {
     progressInView?: boolean;
 }
 
+export interface SkillItemType {
+    logo: string;
+    name: string;
+}
+
 export interface ContactInfoType {
     name: string;
     data: string;

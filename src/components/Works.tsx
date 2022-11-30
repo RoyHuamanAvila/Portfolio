@@ -11,7 +11,7 @@ const Works = () => {
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668635675/WorksPortfolio/WeatherApp/WeatherAppMain.jpg",
             name: "Weather App",
             tags: ['React', 'Sass', 'Typescript', 'OpenWeather'],
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur natus, pariatur laudantium eaque molestiae libero? Iusto, adipisci ratione ducimus saepe quas assumenda dolore recusandae magnam, quis totam ea non neque?",
+            description: "Web application with weather forecast information",
             linkCode: 'https://github.com/RoyHuamanAvila/Weather-app',
             linkDemo: ''
         },
@@ -19,7 +19,7 @@ const Works = () => {
             id: "2",
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668635949/WorksPortfolio/TuVideo/TuVideoMain.jpg",
             name: "Tu Video",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quo deleniti, earum ullam eius nostrum tenetur veritatis, nihil reprehenderit, esse repellendus? Dolorum architecto laboriosam asperiores sunt eum magni modi natus.",
+            description: "Site to watch videos with functionalities similar to youtube",
             tags: ['React', 'Nodejs', 'Express', 'Sass', 'Mongo'],
             linkCode: 'https://github.com/RoyHuamanAvila/TuVideo',
             linkDemo: 'https://tuvideo.vercel.app'
@@ -28,7 +28,7 @@ const Works = () => {
             id: "3",
             img: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1668636039/WorksPortfolio/TemplatePage/TemplatePageMain.jpg",
             name: "Template Page",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio assumenda consectetur consequuntur commodi atque non quas id minus, repellat incidunt voluptatum nulla facilis minima delectus reiciendis maxime illo. Provident.",
+            description: "Template page made in Bootstrap 5",
             tags: ['Typescript', 'Bootstrap 5'],
             linkCode: 'https://github.com/RoyHuamanAvila/Firebox',
             linkDemo: ''

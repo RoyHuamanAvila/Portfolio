@@ -8,7 +8,7 @@ const Experience = () => {
                 <p className="blockquote-footer">CAREER PATH</p>
                 <h3>Work Experiences</h3>
                 <div className="pt-5 pb-2">
-                    <button className="text-primary border-0 bg-transparent ps-0">Make It Real</button>
+                    <button className="text-primary border-0 bg-transparent ps-0">Make It Real Camp</button>
                 </div>
             </div>
             <div className="col-12 col-lg-6">
@@ -19,6 +19,7 @@ const Experience = () => {
                     Tags(['React', 'Sass', 'Nodejs', 'MongoDB'])
                 }
                 <hr />
+                <p className="fw-semibold">TuVideo (Video Platform)</p>
                 <ul className="list-group">
                     <li className="list-group-item border-0">
                         In charge of the User/Channel model and the endpoints to which it is necessary to create,
