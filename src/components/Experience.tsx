@@ -1,4 +1,4 @@
-import Tags from "./Tags";
+import { Tags } from "./Tags";
 
 const Experience = () => {
 
@@ -15,9 +15,7 @@ const Experience = () => {
                 <h5>FullStack Developer</h5>
                 <p>Colombia</p>
                 <p>Jul 2022 - Nov 2022 - Full-time</p>
-                {
-                    Tags(['React', 'Sass', 'Nodejs', 'MongoDB'])
-                }
+                <Tags tags={['React', 'Sass', 'Nodejs', 'MongoDB']} />
                 <hr />
                 <p className="fw-semibold">TuVideo (Video Platform)</p>
                 <ul className="list-group">

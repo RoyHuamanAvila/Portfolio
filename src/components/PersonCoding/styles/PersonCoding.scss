@@ -1,0 +1,25 @@
+.personcoding {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.personcoding-idea {
+  animation: floating 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
