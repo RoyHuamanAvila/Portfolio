@@ -117,21 +117,21 @@ const Education = () => {
                             <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <div className="d-flex flex-wrap justify-content-center gap-4 p-4">
                                     {
-                                        skillsFrontend.map(skill => <SkillItem {...skill} />)
+                                        skillsFrontend.map((skill, index) => <SkillItem key={index} {...skill} />)
                                     }
                                 </div>
                             </div>
                             <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                 <div className="d-flex flex-wrap justify-content-center gap-4 p-4">
                                     {
-                                        skillsBackend.map(skill => <SkillItem {...skill} />)
+                                        skillsBackend.map((skill, index) => <SkillItem key={index} {...skill} />)
                                     }
                                 </div>
                             </div>
                             <div className="tab-pane fade" id="nav-tools" role="tabpanel" aria-labelledby="nav-tools-tab">
                                 <div className="d-flex flex-wrap justify-content-center gap-4 p-4">
                                     {
-                                        skillsTools.map(skill => <SkillItem {...skill} />)
+                                        skillsTools.map((skill, index) => <SkillItem key={index} {...skill} />)
                                     }
                                 </div>
                             </div>

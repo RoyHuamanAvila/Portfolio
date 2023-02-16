@@ -1,14 +1,35 @@
 $primary: #74f180;
-$secondary: #6c757d;
+$secondary: #263238;
 
 $theme-colors: (
     "primary": $primary,
-    "secondary": $secondary
+    "secondary": $secondary,
 );
 
+h1,
+h2,
+p {
+    color: $secondary;
+}
 
 .neon {
     color: $primary;
+}
+
+.about {
+    min-height: calc(100vh - 56px);
+    position: relative;
+    display: flex;
+    margin-top: 56px;
+}
+
+.about-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
 }
 
 .page-container {
@@ -16,13 +37,35 @@ $theme-colors: (
     transition: background-color 0.5s;
 }
 
+.navbar {
+    position: sticky !important;
+    background-color: #fff !important;
+    z-index: 10 !important;
+    transition: 0.5s;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0.5rem 2rem !important;
+}
+
+.navbar-brand:hover {
+    color: $primary !important;
+}
+
 .dark {
     background-color: #1E1E1E;
     color: #fff;
     transition: background-color 0.5s;
 
-    h1 {
-        color: #fff;
+    .navbar {
+        background-color: #1E1E1E !important;
+        transition: 0.5s;
+    }
+
+    h1,
+    h2,
+    p {
+        color: #fff !important;
     }
 
     .neon {
@@ -106,12 +149,44 @@ textarea {
     height: 230px;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
 }
 
-.work-image {
-    height: auto;
+.work-container-img {
+    img {
+        transition: 0.5s;
+    }
+}
+
+.work-container-img:hover {
+    img {
+        transform: scale(1.10);
+        transition: 0.5s;
+    }
+}
+
+.work-container-img:hover::after {
+    transform: translateY(0);
+    transition: 0.5s;
+}
+
+.work-container-img::after {
+    position: absolute;
+    right: 0;
+    content: '';
     width: 100%;
-    max-width: 100%;
+    height: 100%;
+    background-color: $primary;
+    opacity: 25%;
+    transform: translateY(100%);
+    transition: 0.5s ease-in;
+}
+
+
+.work-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     opacity: 1;
 }
 
@@ -147,7 +222,6 @@ textarea {
     background-color: $primary;
     transition: width 1s linear;
 }
-
 
 @media screen and (min-width: 992px) {
     .card-photo-bg {

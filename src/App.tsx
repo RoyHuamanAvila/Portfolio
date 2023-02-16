@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
 import { RootState } from "./app/store";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import { lazy, Suspense } from "react";
+
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"))
+const Education = lazy(() => import("./components/Education"));
+const Experience = lazy(() => import("./components/Experience"));
+const Footer = lazy(() => import("./components/Footer"));
+const Navbar = lazy(() => import("./components/Navbar"));
 /* import Services from "./components/Services"; */
 import Works from "./components/Works";
 
