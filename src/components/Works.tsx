@@ -36,7 +36,7 @@ const Works = () => {
     ]
 
     return (
-        <div id="Portfolio" className="row py-5 my-5">
+        <div id="Portfolio" className="row py-5 my-5 section">
             <p className="blockquote-footer">MY WORKS</p>
             <h2>Featured Portfolios</h2>
             <div className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
@@ -51,10 +51,13 @@ const Works = () => {
 const WorkItem: FC<Work> = (work) => {
     const { id, img, name, tags } = work;
     return (
-        <div className="col-12 col-lg-4">
+        <div className="col-12 col-lg-4 work-item">
             <div className="border rounded">
                 <div className="work-container-img rounded-top bg-white" data-bs-toggle="modal" data-bs-target={`#${id}modal`}>
                     <img className="work-image" src={img} alt="work-image" />
+                    <button className="border-0 work-container-interactive">
+                        <div className="px-2 py-1 rounded bg-primary">View more</div>
+                    </button>
                 </div>
                 <div className="py-3 px-3">
                     <h4>{name}</h4>

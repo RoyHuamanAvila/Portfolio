@@ -42,12 +42,12 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                     <fieldset disabled={disabledForm}>
                         <div className="mb-3">
-                            <label className="form-label">Name</label>
-                            <input className="form-control mb-2" type="text" name="name" required />
-                            <label className="form-label">Email</label>
-                            <input className="form-control mb-2" type="email" name="email" required />
-                            <label className="form-label">Message</label>
-                            <textarea className="form-control" name="message" rows={5} required />
+                            <label htmlFor="name" className="form-label">Name</label>
+                            <input className="form-control mb-2" type="text" id="name" name="name" required />
+                            <label htmlFor="email" className="form-label">Email</label>
+                            <input className="form-control mb-2" type="email" id="email" name="email" required />
+                            <label htmlFor="message" className="form-label">Message</label>
+                            <textarea className="form-control" name="message" id="message" rows={5} required />
                         </div>
                         <button className="btn btn-primary col-12 text-white" type="submit">Send Message</button>
                     </fieldset>
