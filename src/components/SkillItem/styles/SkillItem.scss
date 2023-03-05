@@ -1,0 +1,24 @@
+.skillItem {
+  width: 70px;
+  animation: fade-in 1s forwards;
+  opacity: 0;
+
+  .skillItem-image {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
