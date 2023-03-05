@@ -1,8 +1,10 @@
-import { FC, Suspense, lazy } from "react"
+import { FC, Suspense, lazy, useEffect, useState } from "react"
 import type { Work } from "../types"
 import { Tags } from "./Tags"
+import { useInView } from "react-intersection-observer";
 
 const ModalWork = lazy(() => import("./ModalWork/ModalWork"));
+const WorkItem = lazy(() => import('./WorkItem/WorkItem'));
 
 const Works = () => {
     const initialWorks: Work[] = [
@@ -35,38 +37,26 @@ const Works = () => {
         }
     ]
 
+    const { ref: worksContainer, inView: containerInView } = useInView();
+    const [appear, setAppear] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (containerInView) setAppear(true);
+    }, [containerInView])
+
     return (
         <div id="Portfolio" className="row py-5 my-5 section">
-            <p className="blockquote-footer">MY WORKS</p>
-            <h2>Featured Portfolios</h2>
-            <div className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
-                {
-                    initialWorks.map(work => <WorkItem key={work.id} {...work} />)
-                }
+            <div>
+                <p className="blockquote-footer">MY WORKS</p>
+                <h2>Featured Portfolios</h2>
             </div>
-        </div>
-    )
-}
-
-const WorkItem: FC<Work> = (work) => {
-    const { id, img, name, tags } = work;
-    return (
-        <div className="col-12 col-lg-4 work-item">
-            <div className="border rounded">
-                <div className="work-container-img rounded-top bg-white" data-bs-toggle="modal" data-bs-target={`#${id}modal`}>
-                    <img className="work-image" src={img} alt="work-image" />
-                    <button className="border-0 work-container-interactive">
-                        <div className="px-2 py-1 rounded bg-primary">View more</div>
-                    </button>
-                </div>
-                <div className="py-3 px-3">
-                    <h4>{name}</h4>
-                    <Tags tags={tags} />
-                </div>
+            <div ref={worksContainer} className="row mx-auto pt-5 gap-3 px-lg-0 gap-lg-0">
+                <Suspense fallback={<p>Loading...</p>}>
+                    {
+                        appear && initialWorks.map((work, index) => <WorkItem key={work.id} {...work} animationDelay={index / 2} />)
+                    }
+                </Suspense>
             </div>
-            <Suspense fallback={<p>Loading...</p>}>
-                <ModalWork {...work} />
-            </Suspense>
         </div>
     )
 }
