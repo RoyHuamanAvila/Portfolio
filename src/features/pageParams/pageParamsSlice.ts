@@ -13,18 +13,15 @@ export const pageParamsSlice = createSlice({
     name: 'pageParams',
     initialState,
     reducers: {
-        setMode: (state, action: PayloadAction<'light' | 'dark'>) => {
-            state.theme = action.payload
+        toggleTheme: (state) => {
+            state.theme = state.theme === "light"? 'dark' : 'light';
+            localStorage.setItem('theme', state.theme);
         },
-        darkMode: (state) => {
-            state.theme = 'dark';
-            console.log('dark')
-        },
-        lightMode: (state) => {
-            state.theme = 'light';
+        setTheme: (state, action) => {
+            state.theme = action.payload;
         }
     }
 })
 
-export const {setMode, darkMode, lightMode} = pageParamsSlice.actions;
+export const {toggleTheme, setTheme} = pageParamsSlice.actions;
 export default pageParamsSlice.reducer;

@@ -14,6 +14,7 @@ export interface EducationItemType {
     name: string;
     title: string;
     date: string;
+    animationDelay?: number;
 }
 
 export interface SkillType {

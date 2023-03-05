@@ -1,0 +1,33 @@
+.educationitem {
+  animation: appear 1s forwards;
+  opacity: 0;
+}
+
+.point {
+  background-color: #74f180;
+  transform: scale(0);
+  width: 16px;
+  height: 16px;
+  animation: scalePoint 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scalePoint {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
