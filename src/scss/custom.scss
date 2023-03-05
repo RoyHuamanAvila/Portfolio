@@ -111,27 +111,28 @@ p {
     }
 }
 
-.point {
-    background-color: #f1f1f1;
-    width: 16px;
-    height: 16px;
-}
-
 .temp-line {
-    position: relative;
-}
-
-.temp-line::after {
-    content: "";
     position: absolute;
+    left: 7px;
+    margin-top: 60px;
     top: 0;
     bottom: 0;
-    background-color: #f1f1f1;
-    width: 2px;
-    left: 8px;
-    margin-top: 60px;
     margin-bottom: 150px;
+    width: 2px;
+    background-color: #74f180;
+    animation: fill-line 3s cubic-bezier(0.4, 0, 1, 1);
 }
+
+@keyframes fill-line {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 320px;
+    }
+}
+
 
 textarea {
     resize: none !important;

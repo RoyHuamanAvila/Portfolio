@@ -5,7 +5,7 @@ import { PersonCoding } from './PersonCoding';
 const About = () => {
     return (
         <div id="about" className="pb-3 about section">
-            <div className="about-container">
+            <div className="about-container pt-2">
                 <div className="col-12 col-md-6 m-lg-auto">
                     <p className="blockquote-footer col-12 m-0">MY NAME IS</p>
                     <h1>Roy <span className='neon'>Huaman</span></h1>
