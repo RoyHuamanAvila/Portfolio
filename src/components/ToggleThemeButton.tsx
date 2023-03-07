@@ -10,7 +10,8 @@ const ToggleThemeButton = () => {
     const theme = useSelector((state: RootState) => state.pageParams.theme);
 
     useEffect(() => {
-        dispatch(setTheme(localStorage.getItem('theme')));
+        const themeSaved = localStorage.getItem('theme');
+        if (themeSaved) dispatch(setTheme(themeSaved));
     }, [])
 
     const toggle = () => {
