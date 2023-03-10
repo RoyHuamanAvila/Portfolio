@@ -4,7 +4,7 @@ import { Work } from '../../types';
 import { GitHub, PreviewRounded } from '@mui/icons-material';
 import { Tags } from '../Tags';
 
-const ModalWork: React.FC<Work> = ({ id, img, name, tags, description, linkCode, linkDemo }) => {
+const ModalWork: React.FC<Work> = ({ id, role, img, name, tags, description, linkCode, linkDemo }) => {
 
 	return (
 		<div className="modal fade" id={`${id}modal`} data-bs-keyboard="true" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -22,7 +22,7 @@ const ModalWork: React.FC<Work> = ({ id, img, name, tags, description, linkCode,
 							<div className="col-12 col-lg-6">
 								<div className="mb-4">
 									<h5>Role</h5>
-									<p>Fullstack Developer</p>
+									<p>{role} Developer</p>
 									<h5>Description</h5>
 									<p>{description}</p>
 									<h5>Tags</h5>
