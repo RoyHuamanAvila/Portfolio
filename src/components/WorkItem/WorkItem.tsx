@@ -3,6 +3,7 @@ import './styles/WorkItem.scss';
 import { Tags } from '../Tags';
 import { ModalWork } from '../ModalWork';
 export interface WorkItemProps {
+	role: 'Fullstack' | 'Frontend' | 'Backend';
 	id: string;
 	img: string;
 	name: string;
