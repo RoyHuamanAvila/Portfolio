@@ -16,7 +16,7 @@ Deploy en Firebase
 Dominio Propio con GoDaddy
 * [https://portfolio-ff801.web.app/](https://portfolio-ff801.web.app/)
 
-## Instalacion
+## Instalación
 * Clona el repositorio
 * Instala los modulos (npm install)
 * Corre el script de NPM (npm run dev)
