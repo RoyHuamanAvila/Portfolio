@@ -21,7 +21,7 @@ const About = () => {
                             <LinkedIn />
                         </IconButton>
                     </div>
-                    <a href='src/files/C.V.RoyHuaman.pdf' download='CV-RoyHuaman' className='mt-2 btn btn-primary text-white'>Download CV</a>
+                    <a href='https://royandresdev-portfolio.s3.sa-east-1.amazonaws.com/C.V.+ROY+HUAMAN+AVILA.pdf' download='CV-RoyHuaman' target='_blank' className='mt-2 btn btn-primary text-white'>View CV</a>
                 </div>
                 <div className="col-12 col-md-6 pt-lg-0 d-flex">
                     <PersonCoding />
