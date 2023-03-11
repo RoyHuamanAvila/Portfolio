@@ -63,8 +63,8 @@ const Contact = () => {
                 </ContactInfoItem>
                 <ContactInfoItem
                     name="Phone"
-                    data="+51 981 830 913"
-                    link="https://wa.me/51981830913?text=Hola quisiera contactar contigo"
+                    data="+51 962 855 883"
+                    link="https://wa.me/51962855883?text=Hola quisiera contactar contigo"
                 >
                     <Call className="m-auto" />
                 </ContactInfoItem>
