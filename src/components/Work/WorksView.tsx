@@ -1,12 +1,12 @@
 import { FC, Suspense, lazy, useEffect, useState } from "react"
-import type { Work } from "../types"
-import { Tags } from "./Tags"
+import type { Work } from "../../types"
+import { Tags } from "../Tags"
 import { useInView } from "react-intersection-observer";
 
-const ModalWork = lazy(() => import("./ModalWork/ModalWork"));
-const WorkItem = lazy(() => import('./WorkItem/WorkItem'));
+const ModalWork = lazy(() => import("../ModalWork/ModalWork"));
+const WorkItem = lazy(() => import('../WorkItem/WorkItem'));
 
-const Works = () => {
+const WorksView = () => {
     const initialWorks: Work[] = [
         {
             role: "Fullstack",
@@ -64,4 +64,4 @@ const Works = () => {
     )
 }
 
-export default Works
+export default WorksView
