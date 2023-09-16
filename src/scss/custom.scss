@@ -1,8 +1,11 @@
 @use './colors.scss';
 
+* {
+    font-family: 'Satoshi', sans-serif;
+}
+
 h1,
 h2,
-
 .neon {
     color: colors.$primary;
 }
