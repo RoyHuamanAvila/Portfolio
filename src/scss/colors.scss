@@ -1,0 +1,17 @@
+$primary: #00FF99;
+$primary-200: #00df7c;
+$primary-300: #00983d;
+$accent-100: #66FFCC;
+$accent-200: #00996d;
+$text-100: #FFFFFF;
+$text-200: #e0e0e0;
+$bg-100: #333333;
+$bg-200: #434343;
+$bg-300: #5c5c5c;
+
+
+$theme-colors: (
+  "primary": $primary,
+  "background": $bg-100,
+  "accent": $accent-100
+);

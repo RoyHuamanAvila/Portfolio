@@ -1,19 +1,10 @@
-$primary: #74f180;
-$secondary: #263238;
-
-$theme-colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-);
+@use './colors.scss';
 
 h1,
 h2,
-p {
-    color: $secondary;
-}
 
 .neon {
-    color: $primary;
+    color: colors.$primary;
 }
 
 .section {
@@ -52,7 +43,7 @@ p {
 }
 
 .navbar-brand:hover {
-    color: $primary !important;
+    color: colors.$primary !important;
 }
 
 .dark {
@@ -73,10 +64,10 @@ p {
 
     .neon {
         color: #fff;
-        text-shadow: 0 0 1px $primary,
-            0 0 5px $primary,
-            0 0 10px $primary,
-            0 0 20px $primary;
+        text-shadow: 0 0 1px colors.$primary,
+            0 0 5px colors.$primary,
+            0 0 10px colors.$primary,
+            0 0 20px colors.$primary;
         transition: 0.5s;
     }
 
@@ -93,7 +84,7 @@ p {
     }
 
     .nav-link:hover {
-        color: $primary !important;
+        color: colors.$primary !important;
     }
 
     .navbar-brand {
@@ -107,7 +98,7 @@ p {
 
     .navbar-toggler {
         color: #fff;
-        border-color: $secondary;
+
     }
 }
 
@@ -220,7 +211,7 @@ textarea {
 
 .progress-transition {
     width: 100%;
-    background-color: $primary;
+    background-color: colors.$primary;
     transition: width 1s linear;
 }
 
