@@ -1,19 +1,17 @@
-$primary: #74f180;
-$secondary: #263238;
+@use './colors.scss';
 
-$theme-colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-);
+* {
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    background: colors.$background !important;
+}
 
 h1,
 h2,
-p {
-    color: $secondary;
-}
-
 .neon {
-    color: $primary;
+    color: colors.$primary;
 }
 
 .section {
@@ -36,11 +34,11 @@ p {
 }
 
 .page-container {
-    background-color: #fff;
+    background: colors.$background;
     transition: background-color 0.5s;
 }
 
-.navbar {
+/* .navbar {
     position: sticky !important;
     background-color: #fff !important;
     z-index: 10 !important;
@@ -52,10 +50,14 @@ p {
 }
 
 .navbar-brand:hover {
-    color: $primary !important;
-}
+    color: colors.$primary !important;
+} */
 
 .dark {
+    color: colors.$text-100;
+}
+
+/* .dark {
     background-color: #1E1E1E !important;
     color: #fff;
     transition: background-color 0.5s;
@@ -73,10 +75,10 @@ p {
 
     .neon {
         color: #fff;
-        text-shadow: 0 0 1px $primary,
-            0 0 5px $primary,
-            0 0 10px $primary,
-            0 0 20px $primary;
+        text-shadow: 0 0 1px colors.$primary,
+            0 0 5px colors.$primary,
+            0 0 10px colors.$primary,
+            0 0 20px colors.$primary;
         transition: 0.5s;
     }
 
@@ -93,7 +95,7 @@ p {
     }
 
     .nav-link:hover {
-        color: $primary !important;
+        color: colors.$primary !important;
     }
 
     .navbar-brand {
@@ -107,9 +109,9 @@ p {
 
     .navbar-toggler {
         color: #fff;
-        border-color: $secondary;
+
     }
-}
+} */
 
 .temp-line {
     position: absolute;
@@ -220,7 +222,7 @@ textarea {
 
 .progress-transition {
     width: 100%;
-    background-color: $primary;
+    background-color: colors.$primary;
     transition: width 1s linear;
 }
 
@@ -244,4 +246,5 @@ textarea {
     }
 }
 
+@import "./colors.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
