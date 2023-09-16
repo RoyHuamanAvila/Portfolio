@@ -11,6 +11,7 @@ const Navbar = lazy(() => import("./components/Navbar"));
 /* import Services from "./components/Services"; */
 import Works from "./components/Works";
 import { toggleTheme } from "./features/pageParams/pageParamsSlice";
+import { Header } from "./components";
 
 const App = () => {
   const theme = useSelector((state: RootState) => state.pageParams.theme)
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <div className={`page-container ${theme}`}>
       <div className="container">
-        <Navbar />
+        <Header />
         <About />
         {/*  <Services /> */}
         <Works />

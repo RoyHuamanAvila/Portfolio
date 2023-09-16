@@ -4,6 +4,10 @@
     font-family: 'Satoshi', sans-serif;
 }
 
+body {
+    background: colors.$background !important;
+}
+
 h1,
 h2,
 .neon {
@@ -30,11 +34,11 @@ h2,
 }
 
 .page-container {
-    background-color: #fff;
+    background: colors.$background;
     transition: background-color 0.5s;
 }
 
-.navbar {
+/* .navbar {
     position: sticky !important;
     background-color: #fff !important;
     z-index: 10 !important;
@@ -47,9 +51,13 @@ h2,
 
 .navbar-brand:hover {
     color: colors.$primary !important;
-}
+} */
 
 .dark {
+    color: colors.$text-100;
+}
+
+/* .dark {
     background-color: #1E1E1E !important;
     color: #fff;
     transition: background-color 0.5s;
@@ -103,7 +111,7 @@ h2,
         color: #fff;
 
     }
-}
+} */
 
 .temp-line {
     position: absolute;
@@ -238,4 +246,5 @@ textarea {
     }
 }
 
+@import "./colors.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
