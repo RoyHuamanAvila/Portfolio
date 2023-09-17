@@ -12,7 +12,7 @@ const Footer = () => {
                     <LinkedIn />
                 </IconButton>
             </div>
-            <p className="text-muted">© 2022 - Roy Huaman Avila</p>
+            <p className="text-accent">© 2023 - Roy Huaman Avila</p>
         </div>
     )
 }
