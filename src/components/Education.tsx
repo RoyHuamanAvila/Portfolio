@@ -17,17 +17,16 @@ const Education = () => {
     return (
         <div className="py-5 my-5" id="Skills" ref={educationContainer}>
             <div>
-                <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>LEARNING PATH</p>
-                <h3>Education & Skills</h3>
+                <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>RUTA DE APRENDIZAJE</p>
+                <h3>Educación y Habilidades</h3>
             </div>
             <div className="row">
                 <div className="col-12 col-lg-6">
                     <div className="py-4 position-relative">
                         {
                             appear && <>
-                                <EducationItem name="Make It Real" title="Bootcamp - FullStack Developer" date="2022" animationDelay={1} />
-                                <EducationItem name="Institute San Ignacio de Loyola" title="Bachelor's degree - Software Engineering" date="2021 - 2024" animationDelay={2} />
-                                <EducationItem name="Cibertec" title="Diploma's degree - Java" date="2020 - 2021" animationDelay={3} />
+                                <EducationItem name="Instituto San Ignacio de Loyola" title="Ingeniería de Software" date="2021 - En pausa" animationDelay={1} />
+                                <EducationItem name="Cibertec" title="Java" date="2020 - 2021" animationDelay={2} />
                                 <div className="temp-line"></div>
                             </>
                         }
@@ -36,8 +35,8 @@ const Education = () => {
                 <div className="col-12 col-lg-6">
                     <div className="py-4">
                         <p>
-                            For 2+ years, I have been continuously learning in the field of frontend/backend and experimenting with
-                            new technologies and frameworks, and here you can see a summary of my skills.
+                            Durante más de 2 años, he estado aprendiendo continuamente en el campo del frontend/backend y experimentando
+                            con nuevas tecnologías y frameworks, y aquí puedes ver un resumen de mis habilidades.
                         </p>
                         {
                             appear && <Tabs />
