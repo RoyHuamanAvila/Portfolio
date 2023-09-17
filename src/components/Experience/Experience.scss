@@ -1,0 +1,8 @@
+@use 'src/scss/colors';
+
+.list-group {
+  .list-group-item {
+    background: transparent;
+    color: colors.$text-100;
+  }
+}
