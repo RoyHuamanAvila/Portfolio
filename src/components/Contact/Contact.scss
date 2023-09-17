@@ -1,0 +1,21 @@
+@use "src/scss/colors";
+
+.Contact {
+
+  input,
+  textarea {
+    background: colors.$bg-300;
+    border: 0;
+    color: colors.$text-100;
+
+    &:focus {
+      background: colors.$bg-300;
+      color: colors.$text-100;
+    }
+  }
+
+  button[type="submit"] {
+    background: colors.$accent-200;
+    border: 0;
+  }
+}
