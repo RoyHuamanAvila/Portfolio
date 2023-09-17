@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./app/store";
 import { lazy, Suspense, useEffect, useState } from "react";
 
-const About = lazy(() => import("./components/About"));
+const About = lazy(() => import("./components/About/About"));
 const Contact = lazy(() => import("./components/Contact/ContactContainer"))
 const Education = lazy(() => import("./components/Education"));
 const ExperienceLazy = lazy(() => import("./components/Experience/ExperienceContainer"));
