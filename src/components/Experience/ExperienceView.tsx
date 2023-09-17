@@ -1,6 +1,6 @@
-import { Tags } from "./Tags";
+import { Tags } from "../Tags";
 
-const Experience = () => {
+const ExperienceView = () => {
 
     return (
         <div id="Experience" className="row py-5 mb-5">
@@ -38,4 +38,4 @@ const Experience = () => {
     )
 }
 
-export default Experience;
+export default ExperienceView;
