@@ -1,5 +1,5 @@
 import { SkillItemType } from '../../types';
-import './styles/Tabs.scss';
+import './Tabs.scss';
 import React, { Suspense, lazy, useState } from 'react';
 export interface TabsProps { }
 
