@@ -5,7 +5,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"))
 const Education = lazy(() => import("./components/Education"));
-const Experience = lazy(() => import("./components/Experience"));
+const ExperienceLazy = lazy(() => import("./components/Experience/ExperienceContainer"));
 const Footer = lazy(() => import("./components/Footer"));
 const Navbar = lazy(() => import("./components/Navbar"));
 /* import Services from "./components/Services"; */
@@ -22,7 +22,7 @@ const App = () => {
         <About />
         {/*  <Services /> */}
         <Works />
-        <Experience />
+        <ExperienceLazy />
         <Education />
         <Contact />
         <Footer />

@@ -8,6 +8,13 @@ body {
     background: colors.$background !important;
 }
 
+.tag {
+    background: colors.$bg-300;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 14px;
+}
+
 h1,
 h2,
 .neon {
