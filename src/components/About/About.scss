@@ -1,0 +1,9 @@
+@use 'src/scss/colors';
+
+.avatar {
+  height: 500px;
+  width: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  border: 5px solid colors.$bg-300;
+}
