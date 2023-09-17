@@ -5,7 +5,9 @@ const HeaderView = () => {
   return (
     <header>
       <nav className="d-flex header-navbar px-5 py-2">
-        <a href="/" className="navbar--logo text-primary">RoyAndresDev</a>
+        <a href="/" className="navbar--logo text-primary">
+          <img src="/Logo.svg" alt="Logo RoyAndresDev" />
+        </a>
         <div className="d-flex gap-3">
           <a href="#portfolio">Proyectos</a>
           <a href="#experience">Experiencia</a>
