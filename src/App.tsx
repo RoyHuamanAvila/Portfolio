@@ -9,9 +9,8 @@ const Experience = lazy(() => import("./components/Experience"));
 const Footer = lazy(() => import("./components/Footer"));
 const Navbar = lazy(() => import("./components/Navbar"));
 /* import Services from "./components/Services"; */
-import Works from "./components/Works";
 import { toggleTheme } from "./features/pageParams/pageParamsSlice";
-import { Header } from "./components";
+import { Header, Works } from "./components";
 
 const App = () => {
   const theme = useSelector((state: RootState) => state.pageParams.theme)

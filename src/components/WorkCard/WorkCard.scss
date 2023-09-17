@@ -1,0 +1,71 @@
+@use 'src/scss/colors';
+
+.Work-Card {
+  background: colors.$bg-200;
+  max-width: 340px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 colors.$primary-300;
+    transform: scale(1.05);
+  }
+
+  .tag {
+    background: colors.$bg-300;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 14px;
+  }
+}
+
+.Work-Card--head-bar {
+  height: 32px;
+  width: 100%;
+  background: colors.$bg-300;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0 0.5rem;
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: colors.$bg-200;
+  }
+}
+
+.Work-card--image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.Work-card--btn {
+  border: 0;
+  font-size: 1.25rem;
+  background: colors.$background;
+  color: colors.$primary;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.shadow-drop-center {
+  animation: shadow-drop-center 0.4s linear both;
+}
+
+@keyframes shadow-drop-center {
+  from {
+    box-shadow: 0 0 0 0 transparent;
+    transform: scale(1);
+  }
+
+  to {
+    box-shadow: 0 0 10px 0 colors.$primary;
+    transform: scale(1.05);
+  }
+}
