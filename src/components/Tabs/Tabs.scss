@@ -1,0 +1,10 @@
+@use 'src/scss/colors';
+
+.nav-link {
+  color: colors.$text-100;
+
+  &.active {
+    color: colors.$primary !important;
+    background-color: colors.$background !important;
+  }
+}
