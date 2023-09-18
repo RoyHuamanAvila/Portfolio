@@ -10,7 +10,7 @@ interface ContactViewProps {
 
 const ContactView: FC<ContactViewProps> = ({ handleSubmit, disabledForm }) => {
     return (
-        <div className="row py-5 my-5 gx-lg-5 Contact" id="Contact">
+        <div className="row py-5 my-5 gx-lg-5 Contact section" id="Contact">
             <div className="col-12 col-lg-6">
                 <form onSubmit={handleSubmit}>
                     <fieldset disabled={disabledForm}>

@@ -23,11 +23,12 @@ const WorksView: FC<WorkViewProps> = ({ works }) => {
             <div className="mb-4">
                 <p className="blockquote-footer">MIS PROYECTOS</p>
                 <h2>Proyectos recientes</h2>
+                <p>Proyectos en los que he pulido mis habilidades como desarrollador fullstack</p>
             </div>
-            <div ref={worksContainer} className="d-flex gap-4 justify-content-center">
+            <div ref={worksContainer} className="d-flex flex-wrap gap-4 justify-content-center">
                 <Suspense fallback={<p>Loading...</p>}>
                     {
-                        appear && works.map((work, index) => <WorkCard key={work.id} work={work} />)
+                        appear && works.map((work, index) => <WorkCard key={index} work={work} />)
                     }
                 </Suspense>
             </div>
