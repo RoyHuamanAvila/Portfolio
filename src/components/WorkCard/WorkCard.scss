@@ -47,6 +47,15 @@
   border-radius: 50%;
 }
 
+.Word-card--description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  min-height: 96px;
+}
+
 .shadow-drop-center {
   animation: shadow-drop-center 0.4s linear both;
 }

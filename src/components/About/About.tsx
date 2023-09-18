@@ -13,9 +13,7 @@ const About = () => {
                     <p className="blockquote-footer col-12 m-0">MI NOMBRE ES</p>
                     <h1>Roy <span className='neon'>Huaman</span></h1>
                     <p>
-                        Me presento mi nombre es Roy y soy desarrollador Full Stack 🎨⚙️ y utilizo tecnologías como JavaScript, React.js, CSS, Sass, NodeJS, Express.js, MongoDB, Git y metodologías de desarrollo ágil como SCRUM en mis proyectos.
-                        Siempre abierto a nuevos retos para probar mis habilidades y participar en proyectos en el cual mi objetivo será el mostrar el mejor resultado junto a mi equipo de trabajo. 💼
-                        También me gusta el desarrollo de videojuegos para matar el tiempo así que no te sorprendas si encuentras algún proyecto de Unity en mi GitHub 🎮.
+                        Soy un desarrollador fullstack que crea soluciones web innovadoras y atractivas con el stack Mongo, Express, React y NestJS, también suelo usar Figma. En esta presentación, les mostraré algunos de mis proyectos y habilidades como desarrollador web. Espero que les guste y que les interese mi trabajo.
                     </p>
                     <div className="d-flex gap-3">
                         <IconButton color='inherit' aria-label='Github' href='https://github.com/RoyHuamanAvila' target={'_blank'}>

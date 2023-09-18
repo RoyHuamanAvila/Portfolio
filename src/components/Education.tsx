@@ -15,7 +15,7 @@ const Education = () => {
     }, [educationInView])
 
     return (
-        <div className="py-5 my-5" id="Skills" ref={educationContainer}>
+        <div className="py-5 my-5 section" id="Skills" ref={educationContainer}>
             <div>
                 <p className="blockquote-footer" style={{ letterSpacing: '5px' }}>RUTA DE APRENDIZAJE</p>
                 <h3>Educación y Habilidades</h3>
