@@ -1,0 +1,41 @@
+@use 'src/scss/colors';
+
+.navbar {
+  background: colors.$bg-200;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0.5rem 2rem !important;
+
+
+  .navbar-brand {
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  .navbar-toggler {
+    color: colors.$primary;
+    font-size: 2rem;
+    border: 0;
+  }
+}
+
+.navbar-nav {
+
+
+  .nav-link {
+
+    &:focus {
+      color: colors.$text-100;
+    }
+
+    &.active {
+      background-color: colors.$bg-200 !important;
+    }
+
+    &:hover {
+      color: colors.$primary;
+    }
+  }
+}
