@@ -31,15 +31,6 @@ h2,
     margin-top: 56px;
 }
 
-.about-container {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-self: center;
-    height: 100%;
-}
-
 .page-container {
     background: colors.$background;
     transition: background-color 0.5s;

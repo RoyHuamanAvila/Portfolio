@@ -22,5 +22,13 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/indent": ["error", "tab"],
+    "no-tabs": [
+      0,
+      {
+        allowIndentationTabs: true,
+        message: "",
+      },
+    ],
   },
 };
