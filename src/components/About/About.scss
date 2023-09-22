@@ -1,9 +1,42 @@
 @use 'src/scss/colors';
 
+.about__photo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .avatar {
-  height: 500px;
-  width: auto;
-  margin-right: auto;
+  height: auto;
+  width: 300px;
   border-radius: 0.5rem;
   border: 5px solid colors.$bg-300;
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media (min-width: 992px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.about__info-container {
+  flex-grow: 1;
+
+  @media (min-width: 992px) {
+    order: 2
+  }
+}
+
+.about__description {
+  flex-grow: 1;
 }
