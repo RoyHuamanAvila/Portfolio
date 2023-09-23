@@ -1,0 +1,27 @@
+@use 'src/scss/colors';
+
+.custom-carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .carousel__arrow {
+    color: colors.$primary;
+    font-size: 1.5rem;
+    background: colors.$bg-300;
+    border: 0;
+    border-radius: 0.25rem;
+  }
+
+  .carousel__container-list {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .list-items {
+      padding: 1rem 0;
+      display: inline-flex;
+      list-style: none;
+      transition: 0.5s;
+    }
+  }
+}

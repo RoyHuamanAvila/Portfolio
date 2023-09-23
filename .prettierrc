@@ -3,5 +3,9 @@
   "singleQuote": true,
   "tabWidth": 2,
   "semi": false,
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "useTabs": true,
+  "prettier/prettier": {
+    
+  }
 }

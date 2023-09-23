@@ -2,10 +2,12 @@
 
 .Work-Card {
   background: colors.$bg-200;
+  width: 100%;
   max-width: 340px;
   border-radius: 0.25rem;
   overflow: hidden;
   transition: 0.5s;
+  margin: auto;
 
   &:hover {
     box-shadow: 0 0 10px 0 colors.$primary-300;
