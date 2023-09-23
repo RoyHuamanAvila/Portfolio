@@ -36,202 +36,16 @@ h2,
     transition: background-color 0.5s;
 }
 
-/* .navbar {
-    position: sticky !important;
-    background-color: #fff !important;
-    z-index: 10 !important;
-    transition: 0.5s;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 0.5rem 2rem !important;
-}
-
-.navbar-brand:hover {
-    color: colors.$primary !important;
-} */
-
 .dark {
     color: colors.$text-100;
 }
-
-/* .dark {
-    background-color: #1E1E1E !important;
-    color: #fff;
-    transition: background-color 0.5s;
-
-    .navbar {
-        background-color: #1E1E1E !important;
-        transition: 0.5s;
-    }
-
-    h1,
-    h2,
-    p {
-        color: #fff !important;
-    }
-
-    .neon {
-        color: #fff;
-        text-shadow: 0 0 1px colors.$primary,
-            0 0 5px colors.$primary,
-            0 0 10px colors.$primary,
-            0 0 20px colors.$primary;
-        transition: 0.5s;
-    }
-
-    .modal-content {
-        background-color: #1E1E1E;
-    }
-
-    .nav-link {
-        color: #fff !important;
-    }
-
-    .nav-link.active {
-        background-color: transparent !important;
-    }
-
-    .nav-link:hover {
-        color: colors.$primary !important;
-    }
-
-    .navbar-brand {
-        color: #fff;
-    }
-
-    .list-group-item {
-        background-color: transparent;
-        color: #fff;
-    }
-
-    .navbar-toggler {
-        color: #fff;
-
-    }
-} */
-
-.temp-line {
-    position: absolute;
-    left: 7px;
-    margin-top: 60px;
-    top: 0;
-    bottom: 0;
-    margin-bottom: 150px;
-    width: 2px;
-    background-color: #74f180;
-    animation: fill-line 3s cubic-bezier(0.4, 0, 1, 1);
-}
-
-@keyframes fill-line {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 160px;
-    }
-}
-
 
 textarea {
     resize: none !important;
 }
 
-.work-container-img {
-    height: 230px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-}
-
-.work-container-img {
-    img {
-        transition: 0.5s;
-    }
-}
-
-.work-container-img:hover {
-    img {
-        transform: scale(1.10);
-        transition: 0.5s;
-    }
-}
-
-.work-container-interactive {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    transform: translateY(100%);
-    background-color: #74f18072;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s;
-}
-
-.work-container-img:hover .work-container-interactive {
-    transform: translateY(0);
-    transition: 0.5s;
-}
-
-.work-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 1;
-}
-
-.hide {
-    display: none;
-}
-
-.appear {
-    animation: appear 2s;
-}
-
 .blockquote-footer {
     letter-spacing: 5px;
-}
-
-.card-photo-bg {
-    height: 400px;
-    width: 336px;
-    border-radius: 16px;
-    margin: auto;
-}
-
-.card-photo {
-    width: 100%;
-    height: 100%;
-    background-color: whitesmoke;
-    border-radius: 16px;
-}
-
-.progress-container {
-    height: 100%;
-}
-
-.progress-none {
-    width: 0;
-    height: 100%;
-}
-
-.progress-transition {
-    width: 100%;
-    background-color: colors.$primary;
-    transition: width 1s linear;
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100;
-    }
 }
 
 @media screen and (min-width: 992px) {
@@ -242,6 +56,20 @@ textarea {
     .card-photo {
         transform: rotate(9.55deg);
     }
+}
+
+::-webkit-scrollbar {
+    background-color: colors.$bg-200
+}
+
+::-webkit-scrollbar-track {
+    padding: 0 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: colors.$bg-300;
+    border-radius: 0.25rem;
+    border: 3px solid colors.$bg-200
 }
 
 @import "./colors.scss";
