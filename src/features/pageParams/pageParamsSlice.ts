@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface pageParamsState {
-    theme: 'light'| 'dark'
+    theme: 'light' | 'dark'
 }
 
 
 const initialState: pageParamsState = {
-    theme: "light"
+    theme: "dark"
 }
 
 export const pageParamsSlice = createSlice({
@@ -14,7 +14,7 @@ export const pageParamsSlice = createSlice({
     initialState,
     reducers: {
         toggleTheme: (state) => {
-            state.theme = state.theme === "light"? 'dark' : 'light';
+            state.theme = state.theme === "light" ? 'dark' : 'light';
             localStorage.setItem('theme', state.theme);
         },
         setTheme: (state, action) => {
@@ -23,5 +23,5 @@ export const pageParamsSlice = createSlice({
     }
 })
 
-export const {toggleTheme, setTheme} = pageParamsSlice.actions;
+export const { toggleTheme, setTheme } = pageParamsSlice.actions;
 export default pageParamsSlice.reducer;
