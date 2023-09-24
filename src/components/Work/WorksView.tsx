@@ -13,8 +13,8 @@ const WorksView: FC<WorkViewProps> = ({ works }) => {
 				<p className="blockquote-footer">MIS PROYECTOS</p>
 				<h2>Proyectos recientes</h2>
 				<p>
-					Proyectos en los que he pulido mis habilidades como desarrollador
-					fullstack
+					En esta sección puedes ver algunos de los proyectos que he realizado o
+					en los que estoy trabajando actualmente.
 				</p>
 			</div>
 			<div className="d-flex flex-wrap gap-4 justify-content-center">
