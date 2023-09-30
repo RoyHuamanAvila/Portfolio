@@ -6,17 +6,22 @@ import ContactInfoItem from './ContactInfoItem'
 interface ContactViewProps {
 	handleSubmit: (e: SyntheticEvent) => void
 	disabledForm: boolean
+	reference: (node?: Element | null) => void
 }
 
-const ContactView: FC<ContactViewProps> = ({ handleSubmit, disabledForm }) => {
+const ContactView: FC<ContactViewProps> = ({
+	handleSubmit,
+	disabledForm,
+	reference,
+}) => {
 	return (
-		<div className="section">
+		<div className="section" id="Contact" ref={reference}>
 			<h2>Contacto</h2>
 			<p>
 				Gracias por visitar mi portafolio web. Espero que te haya gustado lo que
 				has visto. Aquí puedes encontrar mis datos de contacto.
 			</p>
-			<div className="row py-5 mb-5 gx-lg-5 Contact" id="Contact">
+			<div className="row py-5 mb-5 gx-lg-5 Contact">
 				<div className="col-12 col-lg-6">
 					<form onSubmit={handleSubmit}>
 						<fieldset disabled={disabledForm}>

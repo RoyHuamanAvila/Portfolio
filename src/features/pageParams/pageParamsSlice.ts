@@ -1,12 +1,15 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { Sections } from "../../types";
 
 export interface pageParamsState {
-    theme: 'light' | 'dark'
+    theme: 'light' | 'dark',
+    sectionInView: Sections
 }
 
 
 const initialState: pageParamsState = {
-    theme: "dark"
+    theme: "dark",
+    sectionInView: 'Projects'
 }
 
 export const pageParamsSlice = createSlice({
@@ -19,9 +22,12 @@ export const pageParamsSlice = createSlice({
         },
         setTheme: (state, action) => {
             state.theme = action.payload;
+        },
+        setSectionInView: (state, action: PayloadAction<Sections>) => {
+            state.sectionInView = action.payload;
         }
     }
 })
 
-export const { toggleTheme, setTheme } = pageParamsSlice.actions;
+export const { toggleTheme, setTheme, setSectionInView } = pageParamsSlice.actions;
 export default pageParamsSlice.reducer;

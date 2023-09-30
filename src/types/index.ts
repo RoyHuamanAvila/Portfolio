@@ -51,3 +51,5 @@ export interface ServiceItemType {
   description: string;
   children: ReactNode;
 }
+
+export type Sections = 'Projects' | 'Experience' | 'Skills' | 'Contact' | 'About';

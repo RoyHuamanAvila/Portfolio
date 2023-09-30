@@ -1,11 +1,23 @@
 import { GitHub, LinkedIn } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import './About.scss'
-import { type FC } from 'react'
+import { useEffect, type FC } from 'react'
+import { useDispatch } from 'react-redux'
+import { useInView } from 'react-intersection-observer'
+import { setSectionInView } from '../../features/pageParams/pageParamsSlice'
 
 const About: FC = () => {
+	const { ref: about, inView: aboutInView } = useInView({ threshold: 0.5 })
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		if (aboutInView) {
+			dispatch(setSectionInView('About'))
+		}
+	}, [aboutInView])
+
 	return (
-		<div id="about" className="pb-3 about section">
+		<div id="About" className="pb-3 about section" ref={about}>
 			<div className="about-container pt-2">
 				<div className="about__info-container">
 					<p className="blockquote-footer col-12 m-0">MI NOMBRE ES</p>

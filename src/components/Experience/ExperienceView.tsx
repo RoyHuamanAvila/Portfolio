@@ -1,8 +1,13 @@
+import { FC, RefObject } from 'react'
 import './Experience.scss'
 
-const ExperienceView = () => {
+interface ExperienceViewProps {
+	reference: (node?: Element | null) => void
+}
+
+const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 	return (
-		<div id="Experience" className="row py-5 mb-5 section">
+		<div id="Experience" className="row py-5 mb-5 section" ref={reference}>
 			<div className="col-12 col-lg-6">
 				<p className="blockquote-footer">RUTA DE CARRERA</p>
 				<h2>Experiencia</h2>
@@ -14,7 +19,6 @@ const ExperienceView = () => {
 						className="Experience-video"
 						src="https://www.youtube.com/embed/-SJfrF_vJ3A?si=LPywtHhZlh0B3yLj"
 						title="YouTube video player"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen
 					></iframe>
 				</div>

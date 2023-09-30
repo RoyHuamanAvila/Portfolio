@@ -5,10 +5,11 @@ import { Carousel } from '../Carousel'
 
 interface WorkViewProps {
 	readonly works: Work[]
+	reference: (node?: Element | null) => void
 }
-const WorksView: FC<WorkViewProps> = ({ works }) => {
+const WorksView: FC<WorkViewProps> = ({ works, reference }) => {
 	return (
-		<div className="row py-5 my-5 section" id="Portfolio">
+		<div className="row py-5 my-5 section" id="Projects" ref={reference}>
 			<div className="mb-4">
 				<p className="blockquote-footer">MIS PROYECTOS</p>
 				<h2>Proyectos recientes</h2>
