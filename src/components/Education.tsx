@@ -1,21 +1,26 @@
-import { FC, Suspense, lazy, useEffect, useState } from 'react'
-import { EducationItemType, SkillItemType, SkillType } from '../types'
+import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Tabs } from './Tabs'
 import { EducationItem } from './EducationItem'
-
-const SkillsSet = lazy(() => import('./SkillsSet/SkillsSet'))
+import { useDispatch } from 'react-redux'
+import { setSectionInView } from '../features/pageParams/pageParamsSlice'
 
 const Education = () => {
-	const { ref: educationContainer, inView: educationInView } = useInView()
+	const { ref: educationContainer, inView: educationInView } = useInView({
+		threshold: 0.5,
+	})
+	const dispatch = useDispatch()
 	const [appear, setAppear] = useState<boolean>(false)
 
 	useEffect(() => {
-		if (educationInView) setAppear(true)
+		if (educationInView) {
+			dispatch(setSectionInView('Skills'))
+			setAppear(true)
+		}
 	}, [educationInView])
 
 	return (
-		<div className="py-5 my-5 section" id="Skills" ref={educationContainer}>
+		<div id="Skills" className="py-5 my-5 section" ref={educationContainer}>
 			<div>
 				<p className="blockquote-footer" style={{ letterSpacing: '5px' }}>
 					RUTA DE APRENDIZAJE

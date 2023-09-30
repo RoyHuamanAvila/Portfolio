@@ -1,8 +1,12 @@
-import ToggleThemeButton from '../ToggleThemeButton'
+import { Sections } from '../../types'
 import './Navbar.scss'
 import { type FC } from 'react'
 
-const NavbarView: FC = () => {
+interface NavbarViewProps {
+	isActiveLink: (nameSection: Sections) => string
+}
+
+const NavbarView: FC<NavbarViewProps> = ({ isActiveLink }) => {
 	return (
 		<nav className="navbar position-fixed navbar-expand-lg bg-light">
 			<div className="container-fluid">
@@ -26,22 +30,44 @@ const NavbarView: FC = () => {
 				>
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="#">
+							<a
+								className={`nav-link ${isActiveLink('About')}`}
+								aria-current="page"
+								href="#About"
+							>
+								Acerca de mi
+							</a>
+						</li>
+						<li className="nav-item">
+							<a
+								className={`nav-link ${isActiveLink('Projects')}`}
+								aria-current="page"
+								href="#Projects"
+							>
 								Proyectos
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
+							<a
+								className={`nav-link ${isActiveLink('Experience')}`}
+								href="#Experience"
+							>
 								Experiencia
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
+							<a
+								className={`nav-link ${isActiveLink('Skills')}`}
+								href="#Skills"
+							>
 								Habilidades
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#">
+							<a
+								className={`nav-link ${isActiveLink('Contact')}`}
+								href="#Contact"
+							>
 								Contacto
 							</a>
 						</li>
