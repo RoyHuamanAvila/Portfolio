@@ -26,13 +26,15 @@ const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 			<div className="col-12 col-lg-6">
 				<h5>Desarrollador Fullstack</h5>
 				<p>Colombia</p>
-				<p>Jul 2022 - Nov 2022 - Full-time</p>
+				<p>Jul 2022 - Actualidad - Full-time</p>
 				<div className="d-flex gap-2">
-					{['React', 'Sass', 'Nodejs', 'MongoDB'].map((tag, index) => (
-						<span className="tag" key={index}>
-							{tag}
-						</span>
-					))}
+					{['React', 'Javascript', 'Sass', 'Nodejs', 'MongoDB'].map(
+						(tag, index) => (
+							<span className="tag" key={index}>
+								{tag}
+							</span>
+						)
+					)}
 				</div>
 				<hr />
 				<p className="fw-semibold">TuVideo (Video Platform)</p>

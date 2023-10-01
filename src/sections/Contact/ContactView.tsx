@@ -69,8 +69,8 @@ const ContactView: FC<ContactViewProps> = ({
 				<div className="col-12 col-lg-6 ps-5 pt-5 pt-lg-0">
 					<ContactInfoItem
 						name="Dirección"
-						data="Lurin, Lima, Perú"
-						link="https://goo.gl/maps/RZLXPVT4zsnfV82t6"
+						data="Lima, Perú"
+						link="https://maps.app.goo.gl/7RKEMfe2ibujR59TA"
 					>
 						<LocationOn className="m-auto" />
 					</ContactInfoItem>

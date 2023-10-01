@@ -28,7 +28,7 @@
     "image": "https://res.cloudinary.com/dnvhasqmw/image/upload/c_scale,w_310/v1695001277/ClickgramThumb.webp",
     "description": "Clickgram es mi interpretación personal de Instagram, donde estoy trabajando para replicar las características básicas que todos conocemos. Mi objetivo es capturar la esencia del compartir fotos y momentos mientras aprendo en el proceso.",
     "tags": ["React", "Mongo", "Typescript", "Bootstrap 5"],
-    "link_repo": "",
-    "link_demo": ""
+    "link_repo": "https://github.com/RoyHuamanAvila/Clickgram",
+    "link_demo": "/"
   }
 ]
