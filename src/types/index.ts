@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface Work {
+export interface Project {
   name: string;
   image: string;
   description: string;

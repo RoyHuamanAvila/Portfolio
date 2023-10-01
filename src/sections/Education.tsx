@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Tabs } from './Tabs'
-import { EducationItem } from './EducationItem'
+import { Tabs, EducationItem } from '../components'
 import { useDispatch } from 'react-redux'
 import { setSectionInView } from '../features/pageParams/pageParamsSlice'
 
