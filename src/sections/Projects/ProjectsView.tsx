@@ -1,13 +1,12 @@
 import { FC } from 'react'
-import type { Work } from '../../types'
-import { WorkCard } from '../WorkCard'
-import { Carousel } from '../Carousel'
+import type { Project } from '../../types'
+import { ProjectCard, Carousel } from '../../components'
 
-interface WorkViewProps {
-	readonly works: Work[]
+interface ProjectsViewProps {
+	readonly projects: Project[]
 	reference: (node?: Element | null) => void
 }
-const WorksView: FC<WorkViewProps> = ({ works, reference }) => {
+const ProjectsView: FC<ProjectsViewProps> = ({ projects, reference }) => {
 	return (
 		<div className="row py-5 my-5 section" id="Projects" ref={reference}>
 			<div className="mb-4">
@@ -20,8 +19,8 @@ const WorksView: FC<WorkViewProps> = ({ works, reference }) => {
 			</div>
 			<div className="d-flex flex-wrap gap-4 justify-content-center">
 				<Carousel maxItemsPerScroll={3} minWidth={700}>
-					{works.map((work, index) => (
-						<WorkCard key={index} work={work} />
+					{projects.map((work, index) => (
+						<ProjectCard key={index} project={work} />
 					))}
 				</Carousel>
 			</div>
@@ -29,4 +28,4 @@ const WorksView: FC<WorkViewProps> = ({ works, reference }) => {
 	)
 }
 
-export default WorksView
+export default ProjectsView
