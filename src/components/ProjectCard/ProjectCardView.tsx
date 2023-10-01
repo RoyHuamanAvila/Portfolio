@@ -7,7 +7,7 @@ interface ProjectCardViewProps {
 }
 
 const ProjectCardView: FC<ProjectCardViewProps> = ({ project }) => {
-	const { image, name, description, tags } = project
+	const { image, name, description, tags, link_demo, link_repo } = project
 	return (
 		<div className="Work-Card">
 			<div className="Work-Card--head-bar">
@@ -27,14 +27,18 @@ const ProjectCardView: FC<ProjectCardViewProps> = ({ project }) => {
 					))}
 				</div>
 				<div className="d-flex gap-2 justify-content-end">
-					<button
-						className="Work-card--btn bi bi-github"
-						title="Github"
-					></button>
-					<button
-						className="Work-card--btn bi bi-easel-fill"
-						title="Demo"
-					></button>
+					<a href={link_repo} target="_blank">
+						<button
+							className="Work-card--btn bi bi-github"
+							title="Github"
+						></button>
+					</a>
+					<a href={link_demo} target="_blank">
+						<button
+							className="Work-card--btn bi bi-easel-fill"
+							title="Demo"
+						></button>
+					</a>
 				</div>
 			</div>
 		</div>
