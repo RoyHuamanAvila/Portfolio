@@ -5,6 +5,7 @@ import { useEffect, type FC } from 'react'
 import { useDispatch } from 'react-redux'
 import { useInView } from 'react-intersection-observer'
 import { setSectionInView } from '../../features/pageParams/pageParamsSlice'
+import { ButtonCV } from '../../components'
 
 const About: FC = () => {
 	const { ref: about, inView: aboutInView } = useInView({ threshold: 0.5 })
@@ -49,15 +50,9 @@ const About: FC = () => {
 							<LinkedIn />
 						</IconButton>
 					</div>
-					<a
-						href="https://royandresdev-portfolio.s3.sa-east-1.amazonaws.com/C.V.+Roy+Huaman.pdf"
-						download="CV-RoyHuaman"
-						target="_blank"
-						className="mt-2 btn btn-accent text-white"
-						rel="noreferrer"
-					>
-						Ver Curriculum
-					</a>
+					<div className="mt-3">
+						<ButtonCV />
+					</div>
 				</div>
 				<div className="about__photo-container">
 					<img src="/Avatar.jpg" className="avatar shadow" alt="Avatar" />
