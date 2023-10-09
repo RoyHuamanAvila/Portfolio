@@ -8,3 +8,4 @@ export * from './SkillsSet';
 export * from './Tabs';
 export * from './Tags';
 export { default as ToggleThemeButton } from './ToggleThemeButton';
+export * from './ButtonCV'
