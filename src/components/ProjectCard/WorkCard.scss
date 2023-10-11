@@ -8,9 +8,10 @@
   overflow: hidden;
   transition: 0.5s;
   margin: auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
   &:hover {
-    box-shadow: 0 0 10px 0 colors.$primary-300;
+    box-shadow: 0 0 20px 0 colors.$primary;
     transform: scale(1.05);
   }
 }
