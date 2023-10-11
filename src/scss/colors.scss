@@ -8,10 +8,13 @@ $text-200: #e0e0e0;
 $background: #333333;
 $bg-200: #434343;
 $bg-300: #5c5c5c;
-
+$inProgress: #ffe100;
+$completed: $primary;
 
 $theme-colors: (
   "primary": $primary,
   "background": $background,
-  "accent": $accent-200
+  "accent": $accent-200,
+  "inProgress": $inProgress,
+  "completed": $completed
 );

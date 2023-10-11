@@ -5,7 +5,8 @@
     "description": "TuVideo es una app que te permite ver y compartir videos con otras personas. Puedes crear una cuenta y subir tus propios videos, o ver los que han subido otros usuarios. También puedes dejar comentarios y decir lo que te gusta o no de los videos. Además, puedes personalizar tu canal y hacerlo más atractivo para tus seguidores.",
     "tags": ["React", "Nodejs", "NestJS", "Sass", "Mongo"],
     "link_repo": "https://github.com/RoyHuamanAvila/TuVideoV2",
-    "link_demo": "https://tuvideo-79bf9.web.app/"
+    "link_demo": "https://tuvideo-79bf9.web.app/",
+    "status": "inProgress"
   },
   {
     "name": "PokeApp",
@@ -13,7 +14,8 @@
     "description": "Con PokéApp, puedes ver la Pokedex, una guía de todos los Pokemon, y guardar tus Pokemon favoritos en cajas. PokéApp es una app perfecta para los fans de los Pokemon.",
     "tags": ["React", "Sass", "Typescript", "Bootstrap 5"],
     "link_repo": "https://github.com/RoyHuamanAvila/PokemonWeb",
-    "link_demo": "https://pokemonweb-addcc.web.app/"
+    "link_demo": "https://pokemonweb-addcc.web.app/",
+    "status": "inProgress"
   },
   {
     "name": "Portafolio",
@@ -21,7 +23,8 @@
     "description": "Mi portafolio web es una muestra de mi talento y creatividad como desarrollador web. En él, podrás ver los proyectos y las habilidades que he realizado y adquirido en diferentes áreas del desarrollo web. ",
     "tags": ["React", "Typescript", "Bootstrap 5", "Express"],
     "link_repo": "https://github.com/RoyHuamanAvila/Portfolio",
-    "link_demo": "/"
+    "link_demo": "/",
+    "status": "completed"
   },
   {
     "name": "Clickgram",
@@ -29,6 +32,7 @@
     "description": "Clickgram es mi interpretación personal de Instagram, donde estoy trabajando para replicar las características básicas que todos conocemos. Mi objetivo es capturar la esencia del compartir fotos y momentos mientras aprendo en el proceso.",
     "tags": ["React", "Mongo", "Typescript", "Bootstrap 5"],
     "link_repo": "https://github.com/RoyHuamanAvila/Clickgram",
-    "link_demo": "/"
+    "link_demo": "/",
+    "status": "inProgress"
   }
 ]
