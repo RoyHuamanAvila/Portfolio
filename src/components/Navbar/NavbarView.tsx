@@ -8,7 +8,7 @@ interface NavbarViewProps {
 
 const NavbarView: FC<NavbarViewProps> = ({ isActiveLink }) => {
 	return (
-		<nav className="navbar position-fixed navbar-expand-lg bg-light">
+		<nav className="navbar position-fixed navbar-expand-lg bg-light shadow">
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
 					<img src="/Logo.svg" alt="Logo RoyAndresDev" />

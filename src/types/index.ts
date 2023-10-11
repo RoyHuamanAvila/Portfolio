@@ -7,7 +7,7 @@ export interface Project {
   tags: string[];
   link_repo: string;
   link_demo: string;
-  status: 'inProgress' | 'completed';
+  status: string;
 }
 
 export interface EducationItemType {
