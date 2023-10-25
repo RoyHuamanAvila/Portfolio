@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Project } from '../../types'
-import Projects from './Projects.json'
+import Projects from '../../data/Projects.json'
 import ProjectsView from './ProjectsView'
 import { useInView } from 'react-intersection-observer'
 import { useDispatch } from 'react-redux'

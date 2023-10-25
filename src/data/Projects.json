@@ -18,6 +18,15 @@
     "status": "inProgress"
   },
   {
+    "name": "Clickgram",
+    "image": "https://res.cloudinary.com/dnvhasqmw/image/upload/c_scale,w_310/v1695001277/ClickgramThumb.webp",
+    "description": "Clickgram es mi interpretación personal de Instagram, donde estoy trabajando para replicar las características básicas que todos conocemos. Mi objetivo es capturar la esencia del compartir fotos y momentos mientras aprendo en el proceso.",
+    "tags": ["React", "Mongo", "Typescript", "Bootstrap 5"],
+    "link_repo": "https://github.com/RoyHuamanAvila/Clickgram",
+    "link_demo": "https://clickgram-ff2db.web.app/",
+    "status": "inProgress"
+  },
+  {
     "name": "Portafolio",
     "image": "https://res.cloudinary.com/dnvhasqmw/image/upload/c_scale,w_310/v1695000726/RoyAndresDevThumb.webp",
     "description": "Mi portafolio web es una muestra de mi talento y creatividad como desarrollador web. En él, podrás ver los proyectos y las habilidades que he realizado y adquirido en diferentes áreas del desarrollo web. ",
@@ -25,14 +34,5 @@
     "link_repo": "https://github.com/RoyHuamanAvila/Portfolio",
     "link_demo": "/",
     "status": "completed"
-  },
-  {
-    "name": "Clickgram",
-    "image": "https://res.cloudinary.com/dnvhasqmw/image/upload/c_scale,w_310/v1695001277/ClickgramThumb.webp",
-    "description": "Clickgram es mi interpretación personal de Instagram, donde estoy trabajando para replicar las características básicas que todos conocemos. Mi objetivo es capturar la esencia del compartir fotos y momentos mientras aprendo en el proceso.",
-    "tags": ["React", "Mongo", "Typescript", "Bootstrap 5"],
-    "link_repo": "https://github.com/RoyHuamanAvila/Clickgram",
-    "link_demo": "/",
-    "status": "inProgress"
   }
 ]
