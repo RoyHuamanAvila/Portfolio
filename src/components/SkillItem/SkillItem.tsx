@@ -1,10 +1,10 @@
-import React from 'react';
-import './styles/SkillItem.scss';
+import React from 'react'
+import './styles/SkillItem.scss'
 
 export interface SkilltemProps {
-	logo: string;
-	name: string;
-	delay?: number;
+	logo: string
+	name: string
+	delay?: number
 }
 
 const SkillItem: React.FC<SkilltemProps> = ({ logo, name, delay }) => {
@@ -13,9 +13,9 @@ const SkillItem: React.FC<SkilltemProps> = ({ logo, name, delay }) => {
 			<div className="skillItem-image">
 				<img className="img-fluid" src={logo} alt="logo-skill" />
 			</div>
-			<p className="text-center pt-2">{name}</p>
+			<p className="text-center pt-2 m-0">{name}</p>
 		</div>
 	)
-};
+}
 
-export default SkillItem;
+export default SkillItem
