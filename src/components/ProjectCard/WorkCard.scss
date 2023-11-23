@@ -47,10 +47,14 @@
 	border: 0;
 	font-size: 1.25rem;
 	background: colors.$background;
-	color: colors.$primary;
+	color: colors.$text-100;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+
+	&:hover {
+		color: colors.$primary;
+	}
 }
 
 .Word-card--description {
