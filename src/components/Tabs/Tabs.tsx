@@ -1,105 +1,120 @@
-import { SkillItemType } from '../../types';
-import './Tabs.scss';
-import React, { Suspense, lazy, useState } from 'react';
-export interface TabsProps { }
+import { SkillItemType } from '../../types'
+import './Tabs.scss'
+import React, { Suspense, lazy, useState } from 'react'
+export interface TabsProps {}
 
-const SkillsSet = lazy(() => import('../SkillsSet/SkillsSet'));
+const SkillsSet = lazy(() => import('../SkillsSet/SkillsSet'))
 
 const Tabs: React.FC<TabsProps> = () => {
 	const skillsFrontend: SkillItemType[] = [
 		{
-			logo: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1669774772/SkillsLogos/React.svg",
-			name: "React"
+			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669774772/SkillsLogos/React.svg',
+			name: 'React',
 		},
 		{
-			logo: "https://res.cloudinary.com/dcvwghrfp/image/upload/v1669775053/SkillsLogos/Redux.svg",
-			name: "Redux"
+			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669775053/SkillsLogos/Redux.svg',
+			name: 'Redux',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669775680/SkillsLogos/Bootstrap5.svg',
-			name: 'Bootstrap 5'
+			name: 'Bootstrap 5',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669776267/SkillsLogos/Javascript.svg',
-			name: 'Javascript'
+			name: 'Javascript',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669776358/SkillsLogos/TypeScript.svg',
-			name: 'Typescript'
+			name: 'Typescript',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669776491/SkillsLogos/Sass.svg',
-			name: 'Sass'
+			name: 'Sass',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669777801/SkillsLogos/Html.svg',
-			name: 'Html'
+			name: 'Html',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669777920/SkillsLogos/Css.svg',
-			name: 'CSS'
-		}
+			name: 'CSS',
+		},
 	]
 
 	const skillsBackend: SkillItemType[] = [
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669777672/SkillsLogos/Mongo.svg',
-			name: 'MongoDB'
+			name: 'MongoDB',
 		},
 		{
-			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669779476/SkillsLogos/NodeJS.svg',
-			name: 'NodeJS'
+			logo: 'https://res.cloudinary.com/dnvhasqmw/image/upload/v1698885829/Logos/logo-nodejs.svg',
+			name: 'NodeJS',
 		},
 		{
-			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669779564/SkillsLogos/Express.svg',
-			name: 'Express'
+			logo: 'https://res.cloudinary.com/dnvhasqmw/image/upload/v1698886026/Logos/logo-express.svg',
+			name: 'Express',
 		},
 		{
-			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669779642/SkillsLogos/Mongoose.svg',
-			name: 'Mongoose'
-		}
+			logo: 'https://res.cloudinary.com/dnvhasqmw/image/upload/v1698885732/Logos/logo-postgresql.svg',
+			name: 'PostgreSQL',
+		},
 	]
 
 	const skillsTools: SkillItemType[] = [
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669779886/SkillsLogos/Heroku.svg',
-			name: 'Heroku'
+			name: 'Heroku',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669779996/SkillsLogos/Vercel.svg',
-			name: 'Vercel'
+			name: 'Vercel',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669780095/SkillsLogos/Firebase.svg',
-			name: 'Firebase'
+			name: 'Firebase',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669780374/SkillsLogos/git-icon_uznbaz.svg',
-			name: 'Git'
+			name: 'Git',
 		},
 		{
 			logo: 'https://res.cloudinary.com/dcvwghrfp/image/upload/v1669780485/SkillsLogos/Github.svg',
-			name: 'Github'
-		}
+			name: 'Github',
+		},
 	]
 
-	const [activeTab, setActiveTab] = useState<number>(0);
+	const [activeTab, setActiveTab] = useState<number>(0)
 
 	const handleTabClick = (index: number) => {
-		setActiveTab(index);
-	};
+		setActiveTab(index)
+	}
 
 	return (
 		<div className="tabs-container">
 			<ul className="nav nav-tabs">
 				<li className="nav-item">
-					<button className={`nav-link ${activeTab === 0 ? 'active' : ''}`} onClick={() => handleTabClick(0)}>Frontend</button>
+					<button
+						className={`nav-link ${activeTab === 0 ? 'active' : ''}`}
+						onClick={() => handleTabClick(0)}
+					>
+						Frontend
+					</button>
 				</li>
 				<li className="nav-item">
-					<button className={`nav-link ${activeTab === 1 ? 'active' : ''}`} onClick={() => handleTabClick(1)}>Backend</button>
+					<button
+						className={`nav-link ${activeTab === 1 ? 'active' : ''}`}
+						onClick={() => handleTabClick(1)}
+					>
+						Backend
+					</button>
 				</li>
 				<li className="nav-item">
-					<button className={`nav-link ${activeTab === 2 ? 'active' : ''}`} onClick={() => handleTabClick(2)}>Tools</button>
+					<button
+						className={`nav-link ${activeTab === 2 ? 'active' : ''}`}
+						onClick={() => handleTabClick(2)}
+					>
+						Tools
+					</button>
 				</li>
 			</ul>
 			<div className="tab-content">
@@ -111,6 +126,6 @@ const Tabs: React.FC<TabsProps> = () => {
 			</div>
 		</div>
 	)
-};
+}
 
-export default Tabs;
+export default Tabs
