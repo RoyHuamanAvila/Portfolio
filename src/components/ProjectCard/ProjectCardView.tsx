@@ -40,12 +40,18 @@ const ProjectCardView: FC<ProjectCardViewProps> = ({ project }) => {
 						<button
 							className="Work-card--btn bi bi-github"
 							title="Github"
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							data-bs-title="Github"
 						></button>
 					</a>
 					<a href={link_demo} target="_blank">
 						<button
 							className="Work-card--btn bi bi-easel-fill"
 							title="Demo"
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							data-bs-title="Demo"
 						></button>
 					</a>
 				</div>
