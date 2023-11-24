@@ -1,13 +1,13 @@
 import React from 'react'
 import './styles/SkillItem.scss'
 
-export interface SkilltemProps {
+export interface SkillItemProps {
 	logo: string
 	name: string
 	delay?: number
 }
 
-const SkillItem: React.FC<SkilltemProps> = ({ logo, name, delay }) => {
+const SkillItem: React.FC<SkillItemProps> = ({ logo, name, delay }) => {
 	return (
 		<div className="skillItem" style={{ animationDelay: `${delay}s` }}>
 			<div className="skillItem-image">
