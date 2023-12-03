@@ -4,26 +4,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, colors.$primary 0%, colors.$background 100%);
-  background-size: 400% 400%;
-  animation: GradientAnimation 5s ease infinite;
+  //background: linear-gradient(135deg, colors.$primary 0%, colors.$background 100%);
+  //background-size: 400% 400%;
+  //animation: GradientAnimation 5s ease infinite;
   padding: 4px;
   border-radius: 0.5rem;
 }
 
-@keyframes GradientAnimation {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .avatar {
   height: auto;

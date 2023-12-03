@@ -17,7 +17,7 @@ const ProjectsView: FC<ProjectsViewProps> = ({ projects, reference }) => {
 					en los que estoy trabajando actualmente.
 				</p>
 			</div>
-			<div className="d-flex flex-wrap gap-4 justify-content-center">
+			<div className="d-flex flex-wrap gap-4 justify-content-center slide-in-bottom">
 				<Carousel maxItemsPerScroll={3} minWidth={700}>
 					{projects.map((work, index) => (
 						<ProjectCard key={index} project={work} />
