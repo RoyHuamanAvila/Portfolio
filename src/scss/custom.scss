@@ -73,5 +73,6 @@ textarea {
     border: 3px solid colors.$bg-200
 }
 
+@import "./animations.scss";
 @import "./colors.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

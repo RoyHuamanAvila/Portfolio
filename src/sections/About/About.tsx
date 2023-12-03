@@ -20,7 +20,7 @@ const About: FC = () => {
 	return (
 		<div id="About" className="pb-3 about section" ref={about}>
 			<div className="about-container pt-2">
-				<div className="about__info-container">
+				<div className="about__info-container slide-in-right">
 					<p className="blockquote-footer col-12 m-0">MI NOMBRE ES</p>
 					<h1>
 						Roy <span className="neon">Huaman</span>
@@ -54,7 +54,7 @@ const About: FC = () => {
 						<ButtonCV />
 					</div>
 				</div>
-				<div className="about__photo-container">
+				<div className="about__photo-container color-change-2x scale-in-center">
 					<img src="/Avatar.jpg" className="avatar shadow" alt="Avatar" />
 				</div>
 			</div>
