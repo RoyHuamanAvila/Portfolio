@@ -37,6 +37,8 @@ const CarouselContainer: FC<CarouselContainerProps> = ({
 				if (containerCarousel.offsetWidth > minWidth) {
 					setWidthItem(containerCarousel?.offsetWidth / itemsPerScroll)
 					setItemsPerScroll(maxItemsPerScroll)
+					setCurrentIndex(0)
+					setMaxIndex(Math.ceil(children.length / maxItemsPerScroll))
 				} else {
 					setMaxIndex(children.length)
 					setCurrentIndex(0)
