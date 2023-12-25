@@ -7,7 +7,7 @@ interface ProjectCardViewProps {
 }
 
 const ProjectCardView: FC<ProjectCardViewProps> = ({ project }) => {
-	const { image, name, description, tags, link_demo, link_repo, status } =
+	const { image, name, description, tags, link_demo, link_repo, status, link_figma } =
 		project
 	return (
 		<div className="Work-Card">
@@ -53,6 +53,17 @@ const ProjectCardView: FC<ProjectCardViewProps> = ({ project }) => {
 							data-bs-placement="bottom"
 							data-bs-title="Demo"
 						></button>
+					</a>
+					<a href={link_figma} target="_blank">
+						<button
+							className="Work-card--btn"
+							title="Figma"
+							data-bs-toggle="tooltip"
+							data-bs-placement="bottom"
+							data-bs-title="Figma"
+						>
+							<img src="/Figma.svg" alt="Figma icon" />
+						</button>
 					</a>
 				</div>
 			</div>
