@@ -16,6 +16,8 @@ const CarouselContainer: FC<CarouselContainerProps> = ({
 	const [translate, setTranslate] = useState(0)
 	const [widthItem, setWidthItem] = useState(0)
 	const [itemsPerScroll, setItemsPerScroll] = useState(maxItemsPerScroll)
+	const [currentIndex, setCurrentIndex] = useState(0)
+	const [maxIndex, setMaxIndex] = useState(Math.ceil(children.length / itemsPerScroll));
 
 	useEffect(() => {
 		window.addEventListener('resize', updateWidthItem)
@@ -36,6 +38,8 @@ const CarouselContainer: FC<CarouselContainerProps> = ({
 					setWidthItem(containerCarousel?.offsetWidth / itemsPerScroll)
 					setItemsPerScroll(maxItemsPerScroll)
 				} else {
+					setMaxIndex(children.length)
+					setCurrentIndex(0)
 					setWidthItem(containerCarousel.offsetWidth)
 					setItemsPerScroll(1)
 				}
@@ -49,14 +53,20 @@ const CarouselContainer: FC<CarouselContainerProps> = ({
 			const canMove =
 				(Math.abs(translate) + widthItem) * itemsPerScroll <
 				carouselListRef.current.offsetWidth
-			if (canMove) setTranslate(translate - widthItem)
+			if (canMove) {
+				setTranslate(translate - widthItem)
+				setCurrentIndex(currentIndex + 1)
+			}
 		}
 	}
 
 	const handleLeftArrow = () => {
 		if (carouselListRef.current) {
 			const canMove = translate !== 0
-			if (canMove) setTranslate(translate + widthItem)
+			if (canMove) {
+				setTranslate(translate + widthItem)
+				setCurrentIndex(currentIndex - 1)
+			}
 		}
 	}
 
@@ -67,6 +77,8 @@ const CarouselContainer: FC<CarouselContainerProps> = ({
 			handleRightArrow={handleRightArrow}
 			handleLeftArrow={handleLeftArrow}
 			translate={translate}
+			currentIndex={currentIndex}
+			maxIndex={maxIndex}
 		>
 			{children}
 		</CarouselView>
