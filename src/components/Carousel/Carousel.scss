@@ -1,6 +1,10 @@
 @use 'src/scss/colors';
 
 .custom-carousel {
+  width: 100%;
+}
+
+.custom-carousel__content {
   display: flex;
   align-items: center;
   width: 100%;
@@ -22,6 +26,25 @@
       display: inline-flex;
       list-style: none;
       transition: 0.5s;
+    }
+  }
+
+}
+
+.carousel__indicators {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .carousel__indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: colors.$bg-300;
+
+    &.active {
+      background: colors.$primary;
     }
   }
 }
