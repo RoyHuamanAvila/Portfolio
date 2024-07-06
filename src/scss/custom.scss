@@ -22,9 +22,15 @@ h2,
 }
 
 .section {
-    min-height: calc(100vh - 56px);
-    padding-top: calc(56px + 1.5rem);
+    padding-top: 56px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    scroll-snap-align: center;
+    overflow-y: hidden;
 }
 
 .about {
@@ -35,6 +41,9 @@ h2,
 .page-container {
     background: colors.$background;
     transition: background-color 0.5s;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .dark {

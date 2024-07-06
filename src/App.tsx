@@ -21,7 +21,7 @@ const App = () => {
 
 	return (
 		<div className={`page-container ${theme}`}>
-			<div className="container mandatory-scroll-snapping">
+			<div className="container scroll-snap-container">
 				<Navbar />
 				<About />
 				<Projects />
