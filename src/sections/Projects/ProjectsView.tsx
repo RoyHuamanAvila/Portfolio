@@ -8,7 +8,7 @@ interface ProjectsViewProps {
 }
 const ProjectsView: FC<ProjectsViewProps> = ({ projects, reference }) => {
 	return (
-		<div className="row py-5 my-5 section" id="Projects" ref={reference}>
+		<div className="row section" id="Projects" ref={reference}>
 			<div className="mb-4">
 				<p className="blockquote-footer">MIS PROYECTOS</p>
 				<h2>Proyectos recientes</h2>
