@@ -8,7 +8,7 @@ interface ExperienceViewProps {
 const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 	return (
 		<div id="Experience" className="section" ref={reference}>
-			<div>
+			<div className='w-100'>
 				<p className="blockquote-footer">RUTA DE CARRERA</p>
 				<h2 className='text-start'>Experiencia</h2>
 				<div className="pt-2 pb-2">
