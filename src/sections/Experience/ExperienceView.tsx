@@ -7,10 +7,10 @@ interface ExperienceViewProps {
 
 const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 	return (
-		<div id="Experience" className="row section" ref={reference}>
-			<div className="col-12 col-lg-6">
+		<div id="Experience" className="section" ref={reference}>
+			<div>
 				<p className="blockquote-footer">RUTA DE CARRERA</p>
-				<h2>Experiencia</h2>
+				<h2 className='text-start'>Experiencia</h2>
 				<div className="pt-2 pb-2">
 					<button className="text-primary border-0 bg-transparent ps-0 mb-3 fw-bold">
 						Make It Real
@@ -23,10 +23,7 @@ const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 					></iframe>
 				</div>
 			</div>
-			<div className="col-12 col-lg-6">
-				<h5>Desarrollador Fullstack</h5>
-				<p>Colombia</p>
-				<p>Jul 2022 - Actualidad - Full-time</p>
+			<div>
 				<div className="d-flex gap-2">
 					{['React', 'Javascript', 'Sass', 'Nodejs', 'MongoDB'].map(
 						(tag, index) => (
@@ -38,13 +35,6 @@ const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 				</div>
 				<hr />
 				<p className="fw-semibold">TuVideo (Video Platform)</p>
-				<p>
-					TuVideo 📹 es una app que te permite ver y compartir videos con otras
-					personas. Puedes crear una cuenta y subir tus propios videos 📽️, o ver
-					los que han subido otros usuarios. También puedes dejar comentarios ✍️
-					y decir lo que te gusta o no de los videos. Además, puedes
-					personalizar tu canal 🎨 y hacerlo más atractivo para tus seguidores.
-				</p>
 				<p>
 					Me encargué de diseñar y programar el modelo de Usuario/Canal,
 					permitiendo al usuario crear, leer, actualizar y eliminar su
