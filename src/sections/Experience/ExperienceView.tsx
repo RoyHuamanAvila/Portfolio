@@ -7,8 +7,8 @@ interface ExperienceViewProps {
 
 const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 	return (
-		<div id="Experience" className="section" ref={reference}>
-			<div className='w-100'>
+		<div id="Experience" className="section d-md-flex flex-md-row" ref={reference}>
+			<div className='col-12 col-md-6 pe-md-3'>
 				<p className="blockquote-footer">RUTA DE CARRERA</p>
 				<h2 className='text-start'>Experiencia</h2>
 				<div className="pt-2 pb-2">
@@ -23,7 +23,7 @@ const ExperienceView: FC<ExperienceViewProps> = ({ reference }) => {
 					></iframe>
 				</div>
 			</div>
-			<div>
+			<div className='col-12 col-md-6'>
 				<div className="d-flex gap-2">
 					{['React', 'Javascript', 'Sass', 'Nodejs', 'MongoDB'].map(
 						(tag, index) => (
