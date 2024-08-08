@@ -5,7 +5,7 @@
 }
 
 body {
-    background: colors.$background !important;
+    background: colors.$bg-100 !important;
 }
 
 .tag {
@@ -40,7 +40,7 @@ h2,
 }
 
 .page-container {
-    background: colors.$background;
+    background: colors.$bg-100;
     transition: background-color 0.5s;
     height: 100vh;
     overflow-y: scroll;
